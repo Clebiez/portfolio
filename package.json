@@ -1,0 +1,21 @@
+{
+  "name": "gatsby-starter-hello-world",
+  "description": "Gatsby hello world starter",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve"
+  },
+  "dependencies": {
+    "gatsby": "^2.0.0",
+    "gatsby-source-filesystem": "^2.0.7",
+    "normalize.css": "^8.0.0",
+    "particle.js": "^1.0.7",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "react-particles-js": "^2.3.0",
+    "styled-components": "^4.0.2",
+    "trianglify": "^1.2.0"
+  }
+}
