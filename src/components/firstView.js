@@ -44,7 +44,9 @@ class FirstViewComponent extends Component {
     }
 
     componentWillMount() {
-        this.particules = Math.round(document.body.clientWidth/9);
+        if (typeof window !== 'undefined') {
+            this.particules = Math.round(document.body.clientWidth/9);
+        }
     }
 
     render() {
