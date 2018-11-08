@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import theme from '../config/theme';
 
 import SubTitle from './subTitle';
+import SocialBar from './socialBar';
 
 const MainTitle = styled.h1`
     font-family: ${theme.fonts.title};
@@ -56,6 +57,7 @@ class FirstViewComponent extends Component {
                     <MainTitle>Bonjour !</MainTitle>
                     <MainTitle>Je suis Clément Le Biez</MainTitle>
                     <SubTitle>Creative Developer @ Caen, France</SubTitle>
+                    <SocialBar />
                 </FirstViewContent>
             </FirstViewWrapper>;
     }

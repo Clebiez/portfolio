@@ -5,15 +5,17 @@ import Hohey from '../static/hohey.png';
 
 const UseCaseItemWrapper = styled.div`
     width: 100%;
-    margin: 20px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 40px auto;
+    @media (min-width: ${theme.breakpoints.tab}px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 `;
 
 const UseCaseItemContent = styled.div`
-    width: 50%;
-    padding: 30px;
+    width: 100%;
+    margin-top: 20px;
     h3 {
         text-align: center;
         font-size: 36px;
@@ -32,16 +34,39 @@ const UseCaseItemContent = styled.div`
         color: ${theme.colors.blue}
         font-family: 'Arial';
         font-size: 18px;
-        text-align: justify;
+        text-align: left;
+        padding: 5px;
+    }
+
+    a {
+        display: inline-block;
+        margin-top: 20px;
+        border: 2px solid ${theme.colors.yellow}
+        padding: 15px;
+        color: ${theme.colors.yellow}
+        font-size: 18px;
+        font-family: ${theme.fonts.title}
+        text-decoration: none;
+        transition: 0.5s ease all;
+    }
+
+    a:hover {
+        border-color: ${theme.colors.blue}
+        color: ${theme.colors.blue}
+    }
+
+    @media (min-width: ${theme.breakpoints.tab}px) {
+        margin-top: 0;
+        padding: 30px;
     }
 `;
 
 const UseCaseItemPicture = styled.div`
-    width: 50%;
+    width: 70%;
     overflow: hidden;
-    max-height: 500px;
+    max-height: 400px;
     img {
-        width: ${props => props.phoneSize ? '60%' : '100%'}
+        width: 100%;
         margin: auto;
         height: auto;
     }
@@ -57,27 +82,27 @@ class UseCaseItem extends Component {
         this.picture = props.picture;
         this.pictureIsAPhone = props.pictureIsAPhone;
         this.description = props.description;
+        this.url = props.url;
+        console.log(props);
     }
 
     render() {
         return <UseCaseItemWrapper>
-            {
-                this.orientationInverted &&
-                <UseCaseItemPicture phoneSize={this.pictureIsAPhone}>
-                    <img src={this.picture}/>
-                </UseCaseItemPicture>
-            }
             <UseCaseItemContent>
                 <h3>{this.subTitle}</h3>
                 <h4>{this.name}</h4>
                 <p>{this.description}</p>
+                {
+                    this.url &&
+                    <a href={this.url} target="_blank">
+                        En savoir plus
+                    </a>
+
+                }
             </UseCaseItemContent>
-            {
-                !this.orientationInverted &&
-                <UseCaseItemPicture phoneSize={this.pictureIsAPhone}>
-                    <img src={this.picture}/>
-                </UseCaseItemPicture>
-            }
+            <UseCaseItemPicture phoneSize={this.pictureIsAPhone}>
+                <img src={this.picture}/>
+            </UseCaseItemPicture>
         </UseCaseItemWrapper>;
     }
 }

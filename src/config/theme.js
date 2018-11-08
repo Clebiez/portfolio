@@ -6,7 +6,8 @@ const theme = {
         grey: '#1F2833',
         cream: '#C5C6C7',
         blue: '#66FCF1',
-        green: '#45A29E'
+        green: '#45A29E',
+        yellow: '#AFB42B'
 
     },
     spacings: {
@@ -19,6 +20,7 @@ const theme = {
     breakpoints: {
         mobile: 320,
         tab: 768,
+        desk: 960,
     },
     fonts: {
         title: 'Roboto Slab'

@@ -41,6 +41,7 @@ class UseCasesComponent extends Component {
                             name={element.name}
                             description={element.description}
                             subTitle={element.subTitle}
+                            url={element.url}
                         />
                     })
                 }
