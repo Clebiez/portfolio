@@ -38,12 +38,20 @@ const FirstViewContent = styled.div`
 `;
 
 class FirstViewComponent extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    componentDidMount() {
+        this.particules = Math.round(document.body.clientWidth/9)
+    }
+
     render() {
         return <FirstViewWrapper>
                 <Particles params={{
             		particles: {
                         number: {
-                            value: Math.round(window.innerWidth/9),
+                            value:  this.particules,
                             density: {
                                 value_area: 400
                             }

@@ -83,7 +83,6 @@ class UseCaseItem extends Component {
         this.pictureIsAPhone = props.pictureIsAPhone;
         this.description = props.description;
         this.url = props.url;
-        console.log(props);
     }
 
     render() {
