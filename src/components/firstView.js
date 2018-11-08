@@ -40,7 +40,11 @@ const FirstViewContent = styled.div`
 class FirstViewComponent extends Component {
     constructor(props) {
         super(props);
-        this.particules = Math.round(document.body.clientWidth/9)
+        this.particules = 120;
+    }
+
+    componentWillMount() {
+        this.particules = Math.round(document.body.clientWidth/9);
     }
 
     render() {
