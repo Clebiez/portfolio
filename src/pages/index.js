@@ -12,7 +12,7 @@ export default () => {
             <meta
                 name="description"
                 content="Je suis un développeur créatif front et back basé à Caen en France qui peut certainement répondre à votre besoin. N'hésitez pas à me contacter !" />
-            <script type="application/ld+json">
+            <script type="application/ld+json">{`
                 {
                     "@context": "http://schema.org/",
                     "@type": "Person",
@@ -24,7 +24,7 @@ export default () => {
                         "addressRegion": "France"
                     }
                 }
-            </script>
+            `}</script>
         </Helmet>
         <FirstView />
         <UseCases />
