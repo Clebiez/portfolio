@@ -70,22 +70,26 @@ class SocialBar extends Component {
         return <SocialBarWrapper>
             <TwitterLink href="//twitter.com/clebiez"
                 target="_blank"
+                title="Mon Twitter"
                 rel="noopener noreferrer"
                 dangerouslySetInnerHTML={{__html: TwitterIcon.svg}}>
             </TwitterLink>
             <GithubLink href="//github.com/clebiez"
                 target="_blank"
+                title="Mon Github"
                 rel="noopener noreferrer"
                 dangerouslySetInnerHTML={{__html: GithubIcon.svg}}>
             </GithubLink>
             <LinkedinLink href="//www.linkedin.com/in/clebiez/"
                 target="_blank"
+                title="Mon Linkedin"
                 rel="noopener noreferrer"
                 dangerouslySetInnerHTML={{__html: LinkedinIcon.svg}}>
             </LinkedinLink>
             <GmailLink
                 href="mailto:clement.lebiez@gmail.com"
                 rel="noopener noreferrer"
+                title="Mon e-mail"
             >
                 <img src={GmailIcon} alt="clement.lebiez@gmail.com"/>
             </GmailLink>

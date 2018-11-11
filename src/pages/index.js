@@ -8,9 +8,10 @@ export default () => {
         <Helmet>
             <meta charSet="utf-8" />
             <title>Clément Le Biez, Développeur</title>
+            <meta name="Keywords" content="développeur, front, back, portfolio, clément, le biez" />
             <meta
                 name="description"
-                content="Portfolio de Clément Le Biez, développeur créatif front et back" />
+                content="Je suis un développeur créatif front et back qui peut certainement répondre à votre besoin. N'hésitez pas à me contacter !" />
         </Helmet>
         <FirstView />
         <UseCases />

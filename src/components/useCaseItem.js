@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import theme from '../config/theme';
-import Hohey from '../static/hohey.png';
 
 const UseCaseItemWrapper = styled.div`
     width: 100%;
@@ -95,14 +94,14 @@ class UseCaseItem extends Component {
                 <p>{this.description}</p>
                 {
                     this.url &&
-                    <a href={this.url} target="_blank" rel="noopener noreferrer">
+                    <a href={this.url} target="_blank" rel="noopener noreferrer" title={this.subTitle}>
                         En savoir plus
                     </a>
 
                 }
             </UseCaseItemContent>
             <UseCaseItemPicture phoneSize={this.pictureIsAPhone}>
-                <img src={this.picture}/>
+                <img src={this.picture} alt={this.subTitle}/>
             </UseCaseItemPicture>
         </UseCaseItemWrapper>;
     }
