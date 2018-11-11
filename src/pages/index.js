@@ -7,7 +7,7 @@ export default () => {
     return <div>
         <Helmet>
             <meta charSet="utf-8" />
-            <title>Clément Le Biez, Développeur</title>
+            <title>Clément Le Biez, Développeur Front et Back à Caen</title>
             <meta name="Keywords" content="développeur, front, back, portfolio, clément, le biez, Caen, France" />
             <meta
                 name="description"
