@@ -35,7 +35,7 @@ const UseCaseItemContent = styled.div`
         font-family: 'Arial';
         font-size: 18px;
         text-align: left;
-        padding: 5px;
+        padding: 10px;
     }
 
     a {
@@ -65,6 +65,8 @@ const UseCaseItemPicture = styled.div`
     width: 70%;
     overflow: hidden;
     max-height: 400px;
+    margin: auto;
+    text-align: center;
     img {
         width: 100%;
         margin: auto;
@@ -93,7 +95,7 @@ class UseCaseItem extends Component {
                 <p>{this.description}</p>
                 {
                     this.url &&
-                    <a href={this.url} target="_blank">
+                    <a href={this.url} target="_blank" rel="noopener noreferrer">
                         En savoir plus
                     </a>
 

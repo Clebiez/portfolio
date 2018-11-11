@@ -16,6 +16,16 @@ const MainTitle = styled.h1`
     }
 `;
 
+const SecondTitle = styled.h2`
+    font-family: ${theme.fonts.title};
+    color: ${theme.colors.blue};
+    font-size: 40px;
+    text-align: center;
+    @media (min-width: ${theme.breakpoints.tab}px) {
+        font-size: 60px;
+    }
+`;
+
 const FirstViewWrapper = styled.div`
     width: 100%;
     height: 100vh;
@@ -65,9 +75,9 @@ class FirstViewComponent extends Component {
                 height='100vh'
                 />
                 <FirstViewContent>
-                    <MainTitle>Bonjour !</MainTitle>
+                    <SecondTitle>Bonjour !</SecondTitle>
                     <MainTitle>Je suis Clément Le Biez</MainTitle>
-                    <SubTitle>Creative Developer @ Caen, France</SubTitle>
+                    <SubTitle>Développeur créatif front et back @ Caen</SubTitle>
                     <SocialBar />
                 </FirstViewContent>
             </FirstViewWrapper>;
