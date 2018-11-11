@@ -8,7 +8,6 @@ export default () => {
         <Helmet>
             <meta charSet="utf-8" />
             <title>Clément Le Biez, Développeur Front et Back à Caen</title>
-            <meta name="Keywords" content="développeur, front, back, portfolio, clément, le biez, Caen, France" />
             <meta
                 name="description"
                 content="Je suis un développeur créatif front et back basé à Caen en France qui peut certainement répondre à votre besoin. N'hésitez pas à me contacter !" />
