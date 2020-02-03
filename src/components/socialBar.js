@@ -1,100 +1,68 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import theme from '../config/theme';
 
-import TwitterIcon from 'simple-icons/icons/twitter';
-import GithubIcon from 'simple-icons/icons/github';
-import LinkedinIcon from 'simple-icons/icons/linkedin';
-import GmailIcon from '../static/gmail.svg';
+import TwitterIcon from "../static/twitter.svg";
+import GithubIcon from "../static/github.svg";
+import LinkedinIcon from "../static/linkedin.png";
+import TelegramIcon from '../static/telegram.svg';
 
-console.log(GmailIcon);
+const SocialBarWrapper = styled.div`
+  width: 320px;
+  margin: auto;
+  margin-top: 50px;
+`;
 
 const SocialLink = styled.a`
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     padding: 5px;
     margin: auto 10px;
     cursor: pointer;
-`;
-
-const TwitterLink = styled(SocialLink)`
-    path {
-        fill: #${TwitterIcon.hex}
+    transition: 0.3s all ease;
+    & img {
+      width: 100%;
     }
-`;
 
-const GithubLink = styled(SocialLink)`
-    svg {
-        background-color: white;
-        border-radius: 50%;
-    }
-    path {
-        stroke: #${GithubIcon.hex};
-        fill: #${GithubIcon.hex};
+    &:hover {
+      transform: translateY(-5px) scale(1.2);
     }
 `;
 
-const LinkedinLink = styled(SocialLink)`
-    svg {
-        background-color: white;
-        border-radius: 5px;
-    }
-    path {
-        fill: #${LinkedinIcon.hex}
-    }
-`;
-
-const GmailLink = styled(SocialLink)`
-    svg {
-        background-color: white;
-        border-radius: 5px;
-    }
-    path {
-        fill: #${GmailIcon.hex}
-    }
-`;
-
-const SocialBarWrapper = styled.div`
-    width: 300px;
-    margin: auto;
-    margin-top: 50px;
-`;
-
-class SocialBar extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render () {
-        return <SocialBarWrapper>
-            <TwitterLink href="//twitter.com/clebiez"
-                target="_blank"
-                title="Mon Twitter"
-                rel="noopener noreferrer"
-                dangerouslySetInnerHTML={{__html: TwitterIcon.svg}}>
-            </TwitterLink>
-            <GithubLink href="//github.com/clebiez"
-                target="_blank"
-                title="Mon Github"
-                rel="noopener noreferrer"
-                dangerouslySetInnerHTML={{__html: GithubIcon.svg}}>
-            </GithubLink>
-            <LinkedinLink href="//www.linkedin.com/in/clebiez/"
-                target="_blank"
-                title="Mon Linkedin"
-                rel="noopener noreferrer"
-                dangerouslySetInnerHTML={{__html: LinkedinIcon.svg}}>
-            </LinkedinLink>
-            <GmailLink
-                href="mailto:clement.lebiez@gmail.com"
-                rel="noopener noreferrer"
-                title="Mon e-mail"
-            >
-                <img src={GmailIcon} alt="clement.lebiez@gmail.com"/>
-            </GmailLink>
-        </SocialBarWrapper>;
-    }
-}
+const SocialBar = () => (
+  <SocialBarWrapper>
+    <SocialLink
+      href="//twitter.com/clebiez"
+      target="_blank"
+      title="Mon Twitter"
+      rel="noopener noreferrer"
+    >
+      <img src={TwitterIcon} alt="@clebiez twitter" />
+    </SocialLink>
+    <SocialLink
+      href="//github.com/clebiez"
+      target="_blank"
+      title="Mon Github"
+      rel="noopener noreferrer"
+    >
+      <img src={GithubIcon} alt="clebiez github" />
+    </SocialLink>
+    <SocialLink
+      href="//www.linkedin.com/in/clebiez/"
+      target="_blank"
+      title="Mon Linkedin"
+      rel="noopener noreferrer"
+    >
+      <img src={LinkedinIcon} alt="Clément Le Biez Linkedin" />
+    </SocialLink>
+    <SocialLink
+      href="mailto:clement.lebiez@gmail.com"
+      rel="noopener noreferrer"
+      title="Mon e-mail"
+    >
+      <img src={TelegramIcon} alt="clement.lebiez@gmail.com" />
+    </SocialLink>
+  </SocialBarWrapper>
+);
 
 export default SocialBar;

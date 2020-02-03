@@ -8,7 +8,7 @@ import UseCaseItem from './useCaseItem';
 console.log(UseCasesData);
 
 const UseCasesWrapper = styled.div`
-    background-color: ${theme.colors.dark};
+    background-color: ${theme.colors.white};
     padding-top: 40px;
     text-align: center;
 `;

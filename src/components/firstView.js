@@ -1,87 +1,91 @@
-import Particles from 'react-particles-js';
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import theme from '../config/theme';
+import React, {useState, useEffect, useRef} from "react";
+import styled from "styled-components";
+import theme from "../config/theme";
+import WAVES from "vanta/dist/vanta.waves.min";
+import * as THREE from "three";
 
-import SubTitle from './subTitle';
-import SocialBar from './socialBar';
+import SubTitle from "./subTitle";
+import SocialBar from "./socialBar";
 
 const MainTitle = styled.h1`
-    font-family: ${theme.fonts.title};
-    color: ${theme.colors.blue};
-    font-size: 40px;
-    text-align: center;
-    @media (min-width: ${theme.breakpoints.tab}px) {
-        font-size: 60px;
-    }
+  font-family: ${theme.fonts.title};
+  color: ${theme.colors.white};
+  font-size: 40px;
+  text-align: center;
+  @media (min-width: ${theme.breakpoints.tab}px) {
+    font-size: 60px;
+  }
 `;
 
 const SecondTitle = styled.h2`
-    font-family: ${theme.fonts.title};
-    color: ${theme.colors.blue};
-    font-size: 40px;
-    text-align: center;
-    @media (min-width: ${theme.breakpoints.tab}px) {
-        font-size: 60px;
-    }
+  font-family: ${theme.fonts.title};
+  color: ${theme.colors.white};
+  font-size: 40px;
+  text-align: center;
+  @media (min-width: ${theme.breakpoints.tab}px) {
+    font-size: 60px;
+  }
 `;
 
 const FirstViewWrapper = styled.div`
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    background-color: ${theme.colors.dark};
-    overflow: hidden;
-    div {
-    }
+  width: 100%;
+  height: 90vh;
+  margin: 0;
+  background-color: ${theme.colors.darkBlue};
+  overflow: hidden;
+  div {
+  }
 `;
 
 const FirstViewContent = styled.div`
-    margin-top: ${theme.spacings.xLarge};
-    margin-bottom: ${theme.spacings.medium};
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    text-align: center;
-    left: 0;
+  margin-top: ${theme.spacings.xLarge};
+  margin-bottom: ${theme.spacings.medium};
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  left: 0;
 `;
 
-class FirstViewComponent extends Component {
-    constructor(props) {
-        super(props);
-        this.particules = 120;
+const FirstViewComponent = () => {
+  const [vantaEffect, setVantaEffect] = useState(0);
+  const vantaRef = useRef(null);
+  useEffect(() => {
+    if (!vantaEffect) {
+        setVantaEffect(
+          WAVES({
+            el: vantaRef.current,
+            THREE: THREE,
+            mouseControls: true,
+            touchControls: true,
+            minHeight: 200.0,
+            minWidth: 200.0,
+            scale: 1.0,
+            scaleMobile: 1.0,
+            color: theme.colors.darkBlue,
+            shininess: 40.0,
+            waveHeight: 40.0,
+            waveSpeed: 0.6,
+            zoom: 0.65
+          })
+        );
     }
+    return () => {
+      if (vantaEffect) vantaEffect.destroy();
+    };
+  }, [vantaEffect]);
 
-    componentWillMount() {
-        if (typeof window !== 'undefined') {
-            this.particules = Math.round(document.body.clientWidth/9);
-        }
-    }
-
-    render() {
-        return <FirstViewWrapper>
-                <Particles params={{
-            		particles: {
-                        number: {
-                            value:  this.particules,
-                            density: {
-                                value_area: 400
-                            }
-                        }
-                    }
-                }}
-                width='100%'
-                height='100vh'
-                />
-                <FirstViewContent>
-                    <SecondTitle>Bonjour !</SecondTitle>
-                    <MainTitle>Je suis Clément Le Biez</MainTitle>
-                    <SubTitle>Développeur créatif front et back @ Caen</SubTitle>
-                    <SocialBar />
-                </FirstViewContent>
-            </FirstViewWrapper>;
-    }
-}
+  return (
+    <FirstViewWrapper ref={vantaRef}>
+      <FirstViewContent>
+        <SecondTitle>Bonjour !</SecondTitle>
+        <MainTitle>Je suis Clément Le Biez</MainTitle>
+        <SubTitle>Lead Developeur & Facilitateur agile @ Caen</SubTitle>
+        <SocialBar />
+      </FirstViewContent>
+    </FirstViewWrapper>
+  );
+};
 
 export default FirstViewComponent;

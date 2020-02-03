@@ -3,7 +3,7 @@
   "description": "Gatsby hello world starter",
   "license": "MIT",
   "scripts": {
-    "develop": "gatsby develop",
+    "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve"
   },
@@ -13,15 +13,12 @@
     "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-source-filesystem": "^2.1.33",
     "normalize.css": "^8.0.1",
-    "npm": "^6.12.0",
     "particle.js": "^1.0.7",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-helmet": "^5.2.1",
-    "react-particles-js": "^2.7.0",
-    "react-simple-icons": "^1.0.0-beta.5",
-    "simple-icons": "^1.18.0",
     "styled-components": "^4.4.0",
-    "trianglify": "^2.0.0"
+    "three": "^0.112.1",
+    "vanta": "^0.5.10"
   }
 }
