@@ -81,7 +81,7 @@ const FirstViewComponent = () => {
       <FirstViewContent>
         <SecondTitle>Bonjour !</SecondTitle>
         <MainTitle>Je suis Clément Le Biez</MainTitle>
-        <SubTitle>Lead Developeur & Facilitateur agile @ Caen</SubTitle>
+        <SubTitle>Lead Developer & Facilitateur agile</SubTitle>
         <SocialBar />
       </FirstViewContent>
     </FirstViewWrapper>

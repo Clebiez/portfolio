@@ -23,31 +23,28 @@ const UseCasesList = styled.div`
 
 
 
+const UseCasesComponent = () => (
+  <UseCasesWrapper>
+    <SubTitle>Quelques unes de mes réalisations</SubTitle>
 
-class UseCasesComponent extends Component {
-    render() {
-        return <UseCasesWrapper>
-            <SubTitle>
-                Quelques unes de mes réalisations
-            </SubTitle>
+    <UseCasesList>
+      {UseCasesData.map((element, index) => {
+        return (
+          <UseCaseItem
+            listId={index}
+            key={index}
+            picture={element.picture}
+            pictureIsAPhone={element.pictureIsAPhone}
+            name={element.name}
+            description={element.description}
+            subTitle={element.subTitle}
+            url={element.url}
+          />
+        );
+      })}
+    </UseCasesList>
+  </UseCasesWrapper>
+);
 
-            <UseCasesList>
-                {
-                    UseCasesData.map((element, index) => {
-                        return <UseCaseItem listId={index}
-                            key={index}
-                            picture={element.picture}
-                            pictureIsAPhone={element.pictureIsAPhone}
-                            name={element.name}
-                            description={element.description}
-                            subTitle={element.subTitle}
-                            url={element.url}
-                        />
-                    })
-                }
-            </UseCasesList>
-        </UseCasesWrapper>;
-    }
-}
 
 export default UseCasesComponent;

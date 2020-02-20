@@ -1,10 +1,11 @@
 import React from "react";
 import { Helmet } from 'react-helmet';
 import FirstView from '../components/firstView';
+import Resume from '../components/resume';
 import UseCases from '../components/useCases';
 
 export default () => {
-    return <div>
+    return <>
         <Helmet>
             <meta charSet="utf-8" />
             <title>Clément Le Biez, Développeur Front et Back à Caen</title>
@@ -26,6 +27,7 @@ export default () => {
             `}</script>
         </Helmet>
         <FirstView />
+        <Resume />
         <UseCases />
-    </div>;
+    </>;
 }

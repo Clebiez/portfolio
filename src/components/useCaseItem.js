@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import theme from '../config/theme';
 
 const UseCaseItemWrapper = styled.div`
-    width: 100%;
+    width: 30%;
     margin: 40px auto;
     @media (min-width: ${theme.breakpoints.tab}px) {
         display: flex;
@@ -87,23 +87,14 @@ class UseCaseItem extends Component {
     }
 
     render() {
-        return <UseCaseItemWrapper>
+        return (
+          <UseCaseItemWrapper>
             <UseCaseItemContent>
-                <h3>{this.subTitle}</h3>
-                <h4>{this.name}</h4>
-                <p>{this.description}</p>
-                {
-                    this.url &&
-                    <a href={this.url} target="_blank" rel="noopener noreferrer" title={this.subTitle}>
-                        En savoir plus
-                    </a>
-
-                }
+              <h3>{this.name}</h3>
+              <p>{this.subTitle}</p>
             </UseCaseItemContent>
-            <UseCaseItemPicture phoneSize={this.pictureIsAPhone}>
-                <img src={this.picture} alt={this.subTitle}/>
-            </UseCaseItemPicture>
-        </UseCaseItemWrapper>;
+          </UseCaseItemWrapper>
+        );
     }
 }
 
