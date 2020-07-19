@@ -1,6 +1,6 @@
 const theme = {
   colors: {
-    white: "#fbfaec",
+    white: "#fff",
     black: "black",
     dark: "#0B0C10",
     grey: "#cebed9",
@@ -23,7 +23,8 @@ const theme = {
     desk: 960
   },
   fonts: {
-    title: "Roboto Slab"
+    title: "Roboto Slab",
+    text: "Varta"
   }
 };
 

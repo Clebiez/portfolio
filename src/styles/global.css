@@ -1,6 +1,9 @@
 html, body {
     margin: 0;
     padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css2?family=Varta:wght@400;600&display=swap');

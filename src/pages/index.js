@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import FirstView from '../components/firstView';
 import Resume from '../components/resume';
 import UseCases from '../components/useCases';
+import SocialBar from '../components/socialBar';
 
 export default () => {
     return <>
@@ -29,5 +30,6 @@ export default () => {
         <FirstView />
         <Resume />
         <UseCases />
+        <SocialBar />
     </>;
 }

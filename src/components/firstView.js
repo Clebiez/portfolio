@@ -1,25 +1,17 @@
 import React, {useState, useEffect, useRef} from "react";
 import styled from "styled-components";
 import theme from "../config/theme";
-import WAVES from "vanta/dist/vanta.waves.min";
-import * as THREE from "three";
 
 import SubTitle from "./subTitle";
+import DevelopperIllu from "../static/codeThinking.svg";
+
 import SocialBar from "./socialBar";
+
+import {CurvedSeparator, SectionNegativeMargin} from "./sectionSeparator";
 
 const MainTitle = styled.h1`
   font-family: ${theme.fonts.title};
-  color: ${theme.colors.white};
-  font-size: 40px;
-  text-align: center;
-  @media (min-width: ${theme.breakpoints.tab}px) {
-    font-size: 60px;
-  }
-`;
-
-const SecondTitle = styled.h2`
-  font-family: ${theme.fonts.title};
-  color: ${theme.colors.white};
+  color: ${theme.colors.darkBlue};
   font-size: 40px;
   text-align: center;
   @media (min-width: ${theme.breakpoints.tab}px) {
@@ -29,61 +21,43 @@ const SecondTitle = styled.h2`
 
 const FirstViewWrapper = styled.div`
   width: 100%;
-  height: 90vh;
+  min-height: 90vh;
   margin: 0;
-  background-color: ${theme.colors.darkBlue};
+  background-color: ${theme.colors.white};
   overflow: hidden;
-  div {
-  }
 `;
 
 const FirstViewContent = styled.div`
   margin-top: ${theme.spacings.xLarge};
   margin-bottom: ${theme.spacings.medium};
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
   text-align: center;
-  left: 0;
+`;
+
+const IllustrationContainer = styled.div`
+  padding-top: 8rem;
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  img {
+    width: 100%;
+  }
 `;
 
 const FirstViewComponent = () => {
-  const [vantaEffect, setVantaEffect] = useState(0);
-  const vantaRef = useRef(null);
-  useEffect(() => {
-    if (!vantaEffect) {
-        setVantaEffect(
-          WAVES({
-            el: vantaRef.current,
-            THREE: THREE,
-            mouseControls: true,
-            touchControls: true,
-            minHeight: 200.0,
-            minWidth: 200.0,
-            scale: 1.0,
-            scaleMobile: 1.0,
-            color: theme.colors.darkBlue,
-            shininess: 40.0,
-            waveHeight: 40.0,
-            waveSpeed: 0.6,
-            zoom: 0.65
-          })
-        );
-    }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy();
-    };
-  }, [vantaEffect]);
-
   return (
-    <FirstViewWrapper ref={vantaRef}>
+    <FirstViewWrapper>
       <FirstViewContent>
-        <SecondTitle>Bonjour !</SecondTitle>
-        <MainTitle>Je suis Clément Le Biez</MainTitle>
-        <SubTitle>Lead Developer & Facilitateur agile</SubTitle>
-        <SocialBar />
+        <MainTitle>Bonjour, je suis Clément Le Biez</MainTitle>
+        <SubTitle>
+          Architecte développeur spécialisé dans la gestion de projet agile
+        </SubTitle>
+        <IllustrationContainer>
+          <img src={DevelopperIllu} alt="Illustration de développeur" />
+        </IllustrationContainer>
+        {/* <SocialBar /> */}
       </FirstViewContent>
+      <CurvedSeparator color={theme.colors.white} />
+      <SectionNegativeMargin color={theme.colors.blue} />
     </FirstViewWrapper>
   );
 };
