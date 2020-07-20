@@ -5,8 +5,6 @@ import theme from "../config/theme";
 import SubTitle from "./subTitle";
 import DevelopperIllu from "../static/codeThinking.svg";
 
-import SocialBar from "./socialBar";
-
 import {CurvedSeparator, SectionNegativeMargin} from "./sectionSeparator";
 
 const MainTitle = styled.h1`
@@ -49,12 +47,11 @@ const FirstViewComponent = () => {
       <FirstViewContent>
         <MainTitle>Bonjour, je suis Clément Le Biez</MainTitle>
         <SubTitle>
-          Architecte développeur spécialisé dans la gestion de projet agile
+          Développeur web & mobile spécialisé dans la gestion de projet agile
         </SubTitle>
         <IllustrationContainer>
           <img src={DevelopperIllu} alt="Illustration de développeur" />
         </IllustrationContainer>
-        {/* <SocialBar /> */}
       </FirstViewContent>
       <CurvedSeparator color={theme.colors.white} />
       <SectionNegativeMargin color={theme.colors.blue} />

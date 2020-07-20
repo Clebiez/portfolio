@@ -1,101 +1,48 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import theme from '../config/theme';
+import React, {Component} from "react";
+import styled from "styled-components";
+import theme from "../config/theme";
 
 const UseCaseItemWrapper = styled.div`
-    width: 30%;
-    margin: 40px auto;
-    @media (min-width: ${theme.breakpoints.tab}px) {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  position: relative;
+  height: 400px;
+  width: 600px;
+  background-image: url(${(props) => props.picture});
+  background-size: 100%;
+  cursor: pointer;
+
+  &:hover > div {
+    transition: 0.5s all ease;
+    transform: translateY(0px);
+    height: 100%;
+  }
+
+  &:hover .underline {
+    width: 100px;
+  }
 `;
 
 const UseCaseItemContent = styled.div`
-    width: 100%;
-    margin-top: 20px;
-    h3 {
-        text-align: center;
-        font-size: 36px;
-        margin: 0;
-        color: ${theme.colors.blue};
-        font-family: ${theme.fonts.title};
-    }
-    h4 {
-        text-align: center;
-        font-size: 28px;
-        margin-top: 10px;
-        font-family: ${theme.fonts.title};
-        color: ${theme.colors.green};
-    }
-    p {
-        color: ${theme.colors.blue}
-        font-family: 'Arial';
-        font-size: 18px;
-        text-align: left;
-        padding: 10px;
-    }
-
-    a {
-        display: inline-block;
-        margin-top: 20px;
-        border: 2px solid ${theme.colors.yellow}
-        padding: 15px;
-        color: ${theme.colors.yellow}
-        font-size: 18px;
-        font-family: ${theme.fonts.title}
-        text-decoration: none;
-        transition: 0.5s ease all;
-    }
-
-    a:hover {
-        border-color: ${theme.colors.blue}
-        color: ${theme.colors.blue}
-    }
-
-    @media (min-width: ${theme.breakpoints.tab}px) {
-        margin-top: 0;
-        padding: 30px;
-    }
+  font-family: ${theme.fonts.title};
+  color: ${theme.colors.darkBlue};
+  height: 100px;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: ${theme.colors.white};
+  .underline {
+    height: 2px;
+    background-color: ${theme.colors.darkBlue};
+    width: 50px;
+    transition: 0.3s all ease;
+  }
 `;
 
-const UseCaseItemPicture = styled.div`
-    width: 70%;
-    overflow: hidden;
-    max-height: 400px;
-    margin: auto;
-    text-align: center;
-    img {
-        width: 100%;
-        margin: auto;
-        height: auto;
-    }
-`;
-
-
-class UseCaseItem extends Component {
-    constructor(props) {
-        super(props);
-        this.name = props.name;
-        this.subTitle = props.subTitle;
-        this.orientationInverted = props.listId%2 === 0;
-        this.picture = props.picture;
-        this.pictureIsAPhone = props.pictureIsAPhone;
-        this.description = props.description;
-        this.url = props.url;
-    }
-
-    render() {
-        return (
-          <UseCaseItemWrapper>
-            <UseCaseItemContent>
-              <h3>{this.name}</h3>
-              <p>{this.subTitle}</p>
-            </UseCaseItemContent>
-          </UseCaseItemWrapper>
-        );
-    }
-}
-
-export default UseCaseItem;
+export default ({name, subTitle, picture}) => (
+  <UseCaseItemWrapper picture={picture}>
+    <UseCaseItemContent>
+      <h3>{name}</h3>
+      <div className="underline"></div>
+    </UseCaseItemContent>
+  </UseCaseItemWrapper>
+);

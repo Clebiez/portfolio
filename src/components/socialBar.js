@@ -11,7 +11,7 @@ import EmailIcon from "../static/email.svg";
 
 const Wrapper = styled.div`
   background-color: ${theme.colors.green};
-  padding: 4rem 0 0 0;
+  padding: 4rem 0 2rem 0;
 `;
 
 const SocialBarWrapper = styled.div`
@@ -46,8 +46,9 @@ const SocialLink = styled.a`
 
 const SocialBar = () => (
   <>
+    <SpikeSeparator color={theme.colors.white} />
     <Wrapper>
-      <SocialBarTitle>On peut peut-être travailler ensemble ?</SocialBarTitle>
+      <SocialBarTitle>Ça vous dit que l'on travaille ensemble ?</SocialBarTitle>
       <SocialBarWrapper>
         <SocialLink
           href="//twitter.com/clebiez"
@@ -82,7 +83,6 @@ const SocialBar = () => (
         </SocialLink>
       </SocialBarWrapper>
     </Wrapper>
-    <SpikeSeparator color={theme.colors.green} />
   </>
 );
 
