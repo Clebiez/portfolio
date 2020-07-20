@@ -49,12 +49,12 @@ const UseCasesComponent = () => (
       <UseCaseItem
         picture={HoheyThumb}
         name="HoHey"
-        description="Application web de comparateur de station de skis simple et efficace."
+        description="Application web de comparateur de stations de ski simple et efficace."
       />
       <UseCaseItem
         picture={TeachingThumb}
         name="Enseignements"
-        description="Enseignement de conduite de projet agile au seins de l'Université de Caen Normandie."
+        description="Enseignement de conduite de projet agile au sein de l'Université de Caen Normandie."
       />
       <UseCaseItem
         picture={ProjectCompleted}
