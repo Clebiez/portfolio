@@ -13,7 +13,6 @@
     "gatsby-plugin-robots-txt": "^1.5.1",
     "gatsby-source-filesystem": "^2.3.20",
     "normalize.css": "^8.0.1",
-    "particle.js": "^1.0.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
