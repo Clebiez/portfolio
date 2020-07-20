@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "description": "Gatsby hello world starter",
+  "name": "clebiez-portfolio",
+  "description": "Clément Le Biez, Développeur web & mobile",
   "license": "MIT",
   "scripts": {
     "start": "gatsby develop",
@@ -17,8 +17,6 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
-    "styled-components": "^5.1.1",
-    "three": "^0.118.3",
-    "vanta": "^0.5.16"
+    "styled-components": "^5.1.1"
   }
 }
