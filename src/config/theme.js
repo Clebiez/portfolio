@@ -1,30 +1,31 @@
 const theme = {
-    colors: {
-        white: 'white',
-        black: 'black',
-        dark: '#0B0C10',
-        grey: '#1F2833',
-        cream: '#C5C6C7',
-        blue: '#66FCF1',
-        green: '#45A29E',
-        yellow: '#AFB42B'
-
-    },
-    spacings: {
-        little: '1em',
-        medium: '2em',
-        large: '4em',
-        xLarge: '8em',
-        giant: '16em'
-    },
-    breakpoints: {
-        mobile: 320,
-        tab: 768,
-        desk: 960,
-    },
-    fonts: {
-        title: 'Roboto Slab'
-    }
+  colors: {
+    white: "#fff",
+    black: "black",
+    dark: "#0B0C10",
+    grey: "#cebed9",
+    cream: "#C5C6C7",
+    blue: "#b7d8e6",
+    darkBlue: "#1c2541",
+    green: "#45A29E",
+    yellow: "#f6f1c9"
+  },
+  spacings: {
+    little: "1em",
+    medium: "2em",
+    large: "4em",
+    xLarge: "8em",
+    giant: "16em"
+  },
+  breakpoints: {
+    mobile: 320,
+    tab: 768,
+    desk: 960
+  },
+  fonts: {
+    title: "Roboto Slab",
+    text: "Varta"
+  }
 };
 
 export default theme;

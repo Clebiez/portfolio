@@ -1,100 +1,89 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import theme from '../config/theme';
+import React from "react";
+import styled from "styled-components";
+import theme from "../config/theme";
 
-import TwitterIcon from 'simple-icons/icons/twitter';
-import GithubIcon from 'simple-icons/icons/github';
-import LinkedinIcon from 'simple-icons/icons/linkedin';
-import GmailIcon from '../static/gmail.svg';
+import {SpikeSeparator} from "./sectionSeparator";
 
-console.log(GmailIcon);
+import TwitterIcon from "../static/twitter.svg";
+import GithubIcon from "../static/github.svg";
+import LinkedinIcon from "../static/linkedin.png";
+import EmailIcon from "../static/email.svg";
 
-const SocialLink = styled.a`
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    padding: 5px;
-    margin: auto 10px;
-    cursor: pointer;
-`;
-
-const TwitterLink = styled(SocialLink)`
-    path {
-        fill: #${TwitterIcon.hex}
-    }
-`;
-
-const GithubLink = styled(SocialLink)`
-    svg {
-        background-color: white;
-        border-radius: 50%;
-    }
-    path {
-        stroke: #${GithubIcon.hex};
-        fill: #${GithubIcon.hex};
-    }
-`;
-
-const LinkedinLink = styled(SocialLink)`
-    svg {
-        background-color: white;
-        border-radius: 5px;
-    }
-    path {
-        fill: #${LinkedinIcon.hex}
-    }
-`;
-
-const GmailLink = styled(SocialLink)`
-    svg {
-        background-color: white;
-        border-radius: 5px;
-    }
-    path {
-        fill: #${GmailIcon.hex}
-    }
+const Wrapper = styled.div`
+  background-color: ${theme.colors.green};
+  padding: 4rem 0 2rem 0;
 `;
 
 const SocialBarWrapper = styled.div`
-    width: 300px;
-    margin: auto;
-    margin-top: 50px;
+  width: 320px;
+  margin: auto;
+  margin-top: 20px;
 `;
 
-class SocialBar extends Component {
-    constructor(props) {
-        super(props);
-    }
+const SocialBarTitle = styled.div`
+  font-family: ${theme.fonts.title};
+  color: ${theme.colors.white};
+  font-size: 1.5rem;
+  text-align: center;
+`;
 
-    render () {
-        return <SocialBarWrapper>
-            <TwitterLink href="//twitter.com/clebiez"
-                target="_blank"
-                title="Mon Twitter"
-                rel="noopener noreferrer"
-                dangerouslySetInnerHTML={{__html: TwitterIcon.svg}}>
-            </TwitterLink>
-            <GithubLink href="//github.com/clebiez"
-                target="_blank"
-                title="Mon Github"
-                rel="noopener noreferrer"
-                dangerouslySetInnerHTML={{__html: GithubIcon.svg}}>
-            </GithubLink>
-            <LinkedinLink href="//www.linkedin.com/in/clebiez/"
-                target="_blank"
-                title="Mon Linkedin"
-                rel="noopener noreferrer"
-                dangerouslySetInnerHTML={{__html: LinkedinIcon.svg}}>
-            </LinkedinLink>
-            <GmailLink
-                href="mailto:clement.lebiez@gmail.com"
-                rel="noopener noreferrer"
-                title="Mon e-mail"
-            >
-                <img src={GmailIcon} alt="clement.lebiez@gmail.com"/>
-            </GmailLink>
-        </SocialBarWrapper>;
-    }
-}
+const SocialLink = styled.a`
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  margin: auto 10px;
+  cursor: pointer;
+  transition: 0.2s all ease;
+  & img {
+    width: 100%;
+  }
+
+  &:hover {
+    transform: translateY(-5px) scale(1.3);
+  }
+`;
+
+const SocialBar = () => (
+  <>
+    <SpikeSeparator color={theme.colors.white} />
+    <Wrapper>
+      <SocialBarTitle>Ça vous dit que l'on travaille ensemble ?</SocialBarTitle>
+      <SocialBarWrapper>
+        <SocialLink
+          href="//twitter.com/clebiez"
+          target="_blank"
+          title="Mon Twitter"
+          rel="noopener noreferrer"
+        >
+          <img src={TwitterIcon} alt="@clebiez twitter" />
+        </SocialLink>
+        <SocialLink
+          href="//github.com/clebiez"
+          target="_blank"
+          title="Mon Github"
+          rel="noopener noreferrer"
+        >
+          <img src={GithubIcon} alt="clebiez github" />
+        </SocialLink>
+        <SocialLink
+          href="//www.linkedin.com/in/clebiez/"
+          target="_blank"
+          title="Mon Linkedin"
+          rel="noopener noreferrer"
+        >
+          <img src={LinkedinIcon} alt="Clément Le Biez Linkedin" />
+        </SocialLink>
+        <SocialLink
+          href="mailto:clement.lebiez@gmail.com"
+          rel="noopener noreferrer"
+          title="Mon e-mail"
+        >
+          <img src={EmailIcon} alt="clement.lebiez@gmail.com" />
+        </SocialLink>
+      </SocialBarWrapper>
+    </Wrapper>
+  </>
+);
 
 export default SocialBar;

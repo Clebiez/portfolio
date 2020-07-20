@@ -1,27 +1,22 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "description": "Gatsby hello world starter",
+  "name": "clebiez-portfolio",
+  "description": "Clément Le Biez, Développeur web & mobile",
   "license": "MIT",
   "scripts": {
-    "develop": "gatsby develop",
+    "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "gatsby": "^2.17.0",
-    "gatsby-plugin-react-helmet": "^3.1.13",
-    "gatsby-plugin-robots-txt": "^1.5.0",
-    "gatsby-source-filesystem": "^2.1.33",
+    "gatsby": "^2.24.4",
+    "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-robots-txt": "^1.5.1",
+    "gatsby-source-filesystem": "^2.3.20",
     "normalize.css": "^8.0.1",
-    "npm": "^6.12.0",
     "particle.js": "^1.0.7",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-helmet": "^5.2.1",
-    "react-particles-js": "^2.7.0",
-    "react-simple-icons": "^1.0.0-beta.5",
-    "simple-icons": "^1.18.0",
-    "styled-components": "^4.4.0",
-    "trianglify": "^2.0.0"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
+    "styled-components": "^5.1.1"
   }
 }

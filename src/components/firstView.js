@@ -1,87 +1,62 @@
-import Particles from 'react-particles-js';
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import theme from '../config/theme';
+import React, {useState, useEffect, useRef} from "react";
+import styled from "styled-components";
+import theme from "../config/theme";
 
-import SubTitle from './subTitle';
-import SocialBar from './socialBar';
+import SubTitle from "./subTitle";
+import DevelopperIllu from "../static/codeThinking.svg";
+
+import {CurvedSeparator, SectionNegativeMargin} from "./sectionSeparator";
 
 const MainTitle = styled.h1`
-    font-family: ${theme.fonts.title};
-    color: ${theme.colors.blue};
-    font-size: 40px;
-    text-align: center;
-    @media (min-width: ${theme.breakpoints.tab}px) {
-        font-size: 60px;
-    }
-`;
-
-const SecondTitle = styled.h2`
-    font-family: ${theme.fonts.title};
-    color: ${theme.colors.blue};
-    font-size: 40px;
-    text-align: center;
-    @media (min-width: ${theme.breakpoints.tab}px) {
-        font-size: 60px;
-    }
+  font-family: ${theme.fonts.title};
+  color: ${theme.colors.darkBlue};
+  font-size: 40px;
+  text-align: center;
+  @media (min-width: ${theme.breakpoints.tab}px) {
+    font-size: 60px;
+  }
 `;
 
 const FirstViewWrapper = styled.div`
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    background-color: ${theme.colors.dark};
-    overflow: hidden;
-    div {
-    }
+  width: 100%;
+  min-height: 90vh;
+  margin: 0;
+  background-color: ${theme.colors.white};
+  overflow: hidden;
 `;
 
 const FirstViewContent = styled.div`
-    margin-top: ${theme.spacings.xLarge};
-    margin-bottom: ${theme.spacings.medium};
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    text-align: center;
-    left: 0;
+  margin-top: ${theme.spacings.xLarge};
+  margin-bottom: ${theme.spacings.medium};
+  text-align: center;
 `;
 
-class FirstViewComponent extends Component {
-    constructor(props) {
-        super(props);
-        this.particules = 120;
-    }
+const IllustrationContainer = styled.div`
+  padding-top: 8rem;
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  img {
+    width: 100%;
+  }
+`;
 
-    componentWillMount() {
-        if (typeof window !== 'undefined') {
-            this.particules = Math.round(document.body.clientWidth/9);
-        }
-    }
-
-    render() {
-        return <FirstViewWrapper>
-                <Particles params={{
-            		particles: {
-                        number: {
-                            value:  this.particules,
-                            density: {
-                                value_area: 400
-                            }
-                        }
-                    }
-                }}
-                width='100%'
-                height='100vh'
-                />
-                <FirstViewContent>
-                    <SecondTitle>Bonjour !</SecondTitle>
-                    <MainTitle>Je suis Clément Le Biez</MainTitle>
-                    <SubTitle>Développeur créatif front et back @ Caen</SubTitle>
-                    <SocialBar />
-                </FirstViewContent>
-            </FirstViewWrapper>;
-    }
-}
+const FirstViewComponent = () => {
+  return (
+    <FirstViewWrapper>
+      <FirstViewContent>
+        <MainTitle>Bonjour, je suis Clément Le Biez</MainTitle>
+        <SubTitle>
+          Développeur web & mobile spécialisé dans la gestion de projet agile
+        </SubTitle>
+        <IllustrationContainer>
+          <img src={DevelopperIllu} alt="Illustration de développeur" />
+        </IllustrationContainer>
+      </FirstViewContent>
+      <CurvedSeparator color={theme.colors.white} />
+      <SectionNegativeMargin color={theme.colors.blue} />
+    </FirstViewWrapper>
+  );
+};
 
 export default FirstViewComponent;

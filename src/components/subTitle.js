@@ -5,7 +5,7 @@ const SubTitle = styled.h2`
     display: inline-block;
     margin: auto;
     font-family: ${theme.fonts.title};
-    color: ${theme.colors.cream};
+    color: ${theme.colors.green};
     padding: 10px;
     border: 2px solid ${theme.colors.cream}
     font-size: 24px;

@@ -1,110 +1,82 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import theme from '../config/theme';
+import React, {Component} from "react";
+import styled from "styled-components";
+import theme from "../config/theme";
 
 const UseCaseItemWrapper = styled.div`
-    width: 100%;
-    margin: 40px auto;
-    @media (min-width: ${theme.breakpoints.tab}px) {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  position: relative;
+  height: 200px;
+  width: 300px;
+  border-radius: 4px;
+  background-image: url(${(props) => props.picture});
+  background-size: ${(props) =>
+    props.pictureWidth ? props.pictureWidth : "100%"};
+  cursor: pointer;
+  margin: 1rem;
+  border: 1px solid ${theme.colors.darkBlue};
+  overflow: hidden;
+
+  &:hover > div {
+    transition: 0.5s all ease;
+    transform: translateY(0);
+    height: 100%;
+  }
+
+  &:hover p {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:hover .underline {
+    width: 100px;
+  }
+
+  @media (min-width: ${theme.breakpoints.tab}px) {
+    height: 275px;
+    width: 500px;
+  }
 `;
 
 const UseCaseItemContent = styled.div`
-    width: 100%;
-    margin-top: 20px;
-    h3 {
-        text-align: center;
-        font-size: 36px;
-        margin: 0;
-        color: ${theme.colors.blue};
-        font-family: ${theme.fonts.title};
-    }
-    h4 {
-        text-align: center;
-        font-size: 28px;
-        margin-top: 10px;
-        font-family: ${theme.fonts.title};
-        color: ${theme.colors.green};
-    }
-    p {
-        color: ${theme.colors.blue}
-        font-family: 'Arial';
-        font-size: 18px;
-        text-align: left;
-        padding: 10px;
-    }
+  font-family: ${theme.fonts.title};
+  color: ${theme.colors.darkBlue};
+  height: 75px;
+  padding: 0.5rem 1rem;
+  transform: translateY(100%);
+  background-color: ${theme.colors.white};
+  .underline {
+    height: 2px;
+    background-color: ${theme.colors.darkBlue};
+    width: 50px;
+    transition: 0.3s all ease;
+  }
 
-    a {
-        display: inline-block;
-        margin-top: 20px;
-        border: 2px solid ${theme.colors.yellow}
-        padding: 15px;
-        color: ${theme.colors.yellow}
-        font-size: 18px;
-        font-family: ${theme.fonts.title}
-        text-decoration: none;
-        transition: 0.5s ease all;
-    }
-
-    a:hover {
-        border-color: ${theme.colors.blue}
-        color: ${theme.colors.blue}
-    }
-
-    @media (min-width: ${theme.breakpoints.tab}px) {
-        margin-top: 0;
-        padding: 30px;
-    }
+  @media (min-width: ${theme.breakpoints.tab}px) {
+    transform: translateY(275px) translateY(-75px);
+  }
 `;
 
-const UseCaseItemPicture = styled.div`
-    width: 70%;
-    overflow: hidden;
-    max-height: 400px;
-    margin: auto;
-    text-align: center;
-    img {
-        width: 100%;
-        margin: auto;
-        height: auto;
-    }
+const UseCaseItemTitle = styled.h3`
+
 `;
 
+const UseCaseItemDescription = styled.p`
+  opacity: 0;
 
-class UseCaseItem extends Component {
-    constructor(props) {
-        super(props);
-        this.name = props.name;
-        this.subTitle = props.subTitle;
-        this.orientationInverted = props.listId%2 === 0;
-        this.picture = props.picture;
-        this.pictureIsAPhone = props.pictureIsAPhone;
-        this.description = props.description;
-        this.url = props.url;
-    }
+  visibility: hidden;
+  transition: 0.3s opacity ease;
+`;
 
-    render() {
-        return <UseCaseItemWrapper>
-            <UseCaseItemContent>
-                <h3>{this.subTitle}</h3>
-                <h4>{this.name}</h4>
-                <p>{this.description}</p>
-                {
-                    this.url &&
-                    <a href={this.url} target="_blank" rel="noopener noreferrer" title={this.subTitle}>
-                        En savoir plus
-                    </a>
+const UseCaseItemButton = styled.a`
+  cursor: pointer;
+`;
 
-                }
-            </UseCaseItemContent>
-            <UseCaseItemPicture phoneSize={this.pictureIsAPhone}>
-                <img src={this.picture} alt={this.subTitle}/>
-            </UseCaseItemPicture>
-        </UseCaseItemWrapper>;
-    }
-}
-
-export default UseCaseItem;
+export default ({name, description, picture}) => (
+  <UseCaseItemWrapper picture={picture}>
+    <UseCaseItemContent>
+      <UseCaseItemTitle>{name}</UseCaseItemTitle>
+      <div className="underline"></div>
+      <UseCaseItemDescription>{description}</UseCaseItemDescription>
+      {/* <UseCaseItemButton>Je t'en dis plus ici</UseCaseItemButton> */}
+    </UseCaseItemContent>
+  </UseCaseItemWrapper>
+);
