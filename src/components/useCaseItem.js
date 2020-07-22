@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 import styled from "styled-components";
 import theme from "../config/theme";
 
@@ -41,7 +41,7 @@ const UseCaseItemContent = styled.div`
   color: ${theme.colors.darkBlue};
   height: 75px;
   padding: 0.5rem 1rem;
-  transform: translateY(100%);
+  transform: translateY(200px) translateY(-75px);
   background-color: ${theme.colors.white};
   .underline {
     height: 2px;
@@ -66,9 +66,9 @@ const UseCaseItemDescription = styled.p`
   transition: 0.3s opacity ease;
 `;
 
-const UseCaseItemButton = styled.a`
-  cursor: pointer;
-`;
+// const UseCaseItemButton = styled.a`
+//   cursor: pointer;
+// `;
 
 export default ({name, description, picture}) => (
   <UseCaseItemWrapper picture={picture}>

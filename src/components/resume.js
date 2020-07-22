@@ -4,7 +4,6 @@ import React from "react";
 import SecurityIllu from "../static/fast.svg";
 import DevelopIllu from "../static/codeTyping.svg";
 import ProjectIllu from "../static/scrumBoard.svg";
-import SubTitle from './subTitle';
 
 const ResumeWrapper = styled.div`
   @media (min-width: ${theme.breakpoints.tab}px) {
