@@ -51,11 +51,10 @@ const ResumeItemIllu = styled.img`
 
 const ResumeItemDescription = styled.p`
   padding-top: 1rem;
-  color: ${theme.colors.green};
+  color: ${theme.colors.darkBlue};
   font-family: ${theme.fonts.text};
   font-size: 1.1rem;
   text-align: left;
-  font-weight: 600;
 `;
 
 const Resume = () => (

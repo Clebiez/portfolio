@@ -35,6 +35,7 @@ const UseCasesComponent = () => (
         picture={P2MYThumb}
         name="Play2MeetYou"
         description="Application mobile visant à connecter les utilisateurs entre eux via divers mini-jeux."
+        link="/play2meetyou"
       />
       <UseCaseItem
         picture={YousignThumb}

@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import theme from "../config/theme";
+import {Link} from "gatsby";
 
+import theme from "../config/theme";
 const UseCaseItemWrapper = styled.div`
   position: relative;
   height: 200px;
@@ -55,9 +56,7 @@ const UseCaseItemContent = styled.div`
   }
 `;
 
-const UseCaseItemTitle = styled.h3`
-
-`;
+const UseCaseItemTitle = styled.h3``;
 
 const UseCaseItemDescription = styled.p`
   opacity: 0;
@@ -66,17 +65,20 @@ const UseCaseItemDescription = styled.p`
   transition: 0.3s opacity ease;
 `;
 
-// const UseCaseItemButton = styled.a`
-//   cursor: pointer;
-// `;
+const UseCaseItemButton = styled(Link)`
+  cursor: pointer;
+  color: red;
+`;
 
-export default ({name, description, picture}) => (
+export default ({name, description, picture, link}) => (
   <UseCaseItemWrapper picture={picture}>
     <UseCaseItemContent>
       <UseCaseItemTitle>{name}</UseCaseItemTitle>
       <div className="underline"></div>
       <UseCaseItemDescription>{description}</UseCaseItemDescription>
-      {/* <UseCaseItemButton>Je t'en dis plus ici</UseCaseItemButton> */}
+      {link && (
+        <UseCaseItemButton href={link}>Dites m'en plus !</UseCaseItemButton>
+      )}
     </UseCaseItemContent>
   </UseCaseItemWrapper>
 );
