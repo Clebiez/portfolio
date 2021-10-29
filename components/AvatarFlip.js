@@ -22,6 +22,7 @@ const AvatarFlip = () => {
                             src="/avatar.jpeg"
                             width="120"
                             height="120"
+                            alt="My photo"
                         />
                     </div>
                     <div className="text-6xl back">👋</div>
