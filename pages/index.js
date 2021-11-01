@@ -8,7 +8,9 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Clément Le Biez Développeur Fullstack Web &amp; Mobile</title>
+                <title>
+                    Clément Le Biez Développeur Fullstack Web &amp; Mobile
+                </title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className="flex flex-col items-center justify-center min-h-screen bg-hero-pattern bg-cover">
@@ -21,9 +23,16 @@ export default function Home() {
                         FullStack Web &amp; Mobile Developer
                     </h2>
                     <p className="mt-4 text-xl text-left w-3/5">
-                    Fullstack web and mobile developer with 6 years of experience, I&apos;m passionated about developing accessible, secure and powerful applications.<br />
-                    I&apos;m a fan of the agile methodology and I master the design chain of an application from start to finish.<br />
-                    From the expression of user needs to front-end and back-end development including the deployment on an automated infrastructure.
+                        Fullstack web and mobile developer with 6 years of
+                        experience, I&apos;m passionated about developing
+                        accessible, secure and powerful applications.
+                        <br />
+                        I&apos;m a fan of the agile methodology and I master the
+                        design chain of an application from start to finish.
+                        <br />
+                        From the expression of user needs to front-end and
+                        back-end development including the deployment on an
+                        automated infrastructure.
                     </p>
                 </main>
                 <a

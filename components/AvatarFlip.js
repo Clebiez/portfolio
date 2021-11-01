@@ -34,7 +34,7 @@ const AvatarFlip = () => {
                     perspective: 1000px;
                     transform-style: preserve-3d;
                 }
-                /*  UPDATED! flip the pane when hovered */
+                /*  flip the pane when hovered */
                 .flip-container-activated .back,
                 .flip-container:hover .back {
                     transform: rotateY(0deg);
@@ -72,13 +72,11 @@ const AvatarFlip = () => {
                     left: 0;
                 }
 
-                /*  UPDATED! front pane, placed above back */
                 .front {
                     z-index: 2;
                     transform: rotateY(0deg);
                 }
 
-                /* back, initially hidden pane */
                 .back {
                     transform: rotateY(-180deg);
                     display: flex;
