@@ -4,6 +4,13 @@ import ProjectCard from '../components/ProjectCard'
 import AvatarFlip from '../components/AvatarFlip'
 import MainLayout from '../layouts/MainLayout'
 
+import greenframeImage from '../public/greenframe.png'
+import yousignImage from '../public/yousign/swipe.png'
+import play2meetyouImage from '../public/play2meetyou.jpg'
+import hoheyImage from '../public/hohey.jpeg'
+import unicaenImage from '../public/unicaen.png'
+import facilitationImage from '../public/facilitation.jpeg'
+
 export default function Home() {
     return (
         <MainLayout>
@@ -50,38 +57,38 @@ export default function Home() {
                 <ProjectCard
                     title="GreenFrame"
                     subtitle="Carbon footprint calculator for applications."
-                    image="/greenframe.png"
+                    image={greenframeImage}
                     altImage="Screenshot of GreenFrame.io"
                 />
                 <ProjectCard
                     title="Yousign"
                     subtitle="SaaS Application of electronic signature"
-                    image="/yousign.png"
+                    image={yousignImage}
                     href="useCases/yousign"
                     altImage="Screenshot of Yousign Application"
                 />
                 <ProjectCard
                     title="Play2MeetYou"
                     subtitle="Mobile application to remistify the meeting."
-                    image="/play2meetyou.jpg"
+                    image={play2meetyouImage}
                     altImage="Multiple smartphones containing screenshots of Play2MeetYou"
                 />
                 <ProjectCard
                     title="HoHey"
                     subtitle="Ski resorts comparator"
-                    image="/hohey.jpeg"
+                    image={hoheyImage}
                     altImage="Screenshot of HoHey homepage"
                 />
                 <ProjectCard
                     title="Facilitation"
                     subtitle="Scrum Master and Facilitator of agile workshops."
-                    image="/facilitation.jpeg"
+                    image={facilitationImage}
                     altImage="Screenshot of agile workshop"
                 />
                 <ProjectCard
                     title="Teaching"
                     subtitle="Teaching in Agile Project Management."
-                    image="/unicaen.png"
+                    image={unicaenImage}
                     altImage="Logo of University of Caen, Normandy"
                 />
             </div>

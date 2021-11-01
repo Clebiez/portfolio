@@ -3,10 +3,6 @@
 @tailwind utilities;
 @tailwind screens;
 
-html,
-body {
-    width: 100vw !important;
-}
 @layer base {
     html {
         scroll-behavior: smooth;

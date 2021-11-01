@@ -72,7 +72,6 @@ const Navbar = () => {
                                 {menuItems.map((item) => {
                                     const isActive =
                                         router?.asPath === item.href
-                                    console.log(router.asPath, item.href)
                                     return (
                                         <Link
                                             href={item.href}
