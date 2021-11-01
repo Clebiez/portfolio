@@ -1,28 +1,29 @@
 import Head from 'next/head'
 
-import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa'
 import ProjectCard from '../components/ProjectCard'
 import AvatarFlip from '../components/AvatarFlip'
+import MainLayout from '../layouts/MainLayout'
 
 export default function Home() {
     return (
-        <>
+        <MainLayout>
             <Head>
                 <title>
-                    Clément Le Biez Développeur Fullstack Web &amp; Mobile
+                    Clement Le Biez Fullstack Web &amp; Mobile Developer
                 </title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div className="flex flex-col items-center justify-center min-h-screen bg-hero-pattern bg-cover">
-                <main className="flex flex-col items-center justify-center w-full md:px-20 text-center">
+
+            <div className="m-auto flex flex-col items-center justify-center min-h-screen">
+                <main className="w-full m-auto p-5 flex flex-col items-center justify-center rounded-2xl text-center bg-gray-50 bg-opacity-50">
                     <AvatarFlip />
                     <h1 className="mt-12 text-4xl font-bold font-sans text-gray-800">
-                        Clément Le Biez
+                        Clement Le Biez
                     </h1>
                     <h2 className="mt-4 text-3xl font-bold text-gray-800">
                         FullStack Web &amp; Mobile Developer
                     </h2>
-                    <p className="mt-4 text-xl text-left w-3/5">
+                    <p className="mt-4 text-xl  text-left">
                         Fullstack web and mobile developer with 6 years of
                         experience, I&apos;m passionated about developing
                         accessible, secure and powerful applications.
@@ -34,18 +35,18 @@ export default function Home() {
                         back-end development including the deployment on an
                         automated infrastructure.
                     </p>
+                    <a
+                        href="#mywork"
+                        className="flex items-center justify-center mt-8 p-3 px-8 rounded-full text-base bg-green-300 font-sans font-black uppercase text-gray-800"
+                    >
+                        📔 Portfolio
+                    </a>
                 </main>
-                <a
-                    href="#mywork"
-                    className="flex items-center justify-center mt-8 p-3 px-8 rounded-full text-base bg-green-300 font-sans font-black uppercase text-gray-800"
-                >
-                    📔 Portfolio
-                </a>
             </div>
-            <div
-                id="mywork"
-                className="flex flex-col items-center justify-center md:flex-wrap md:flex-row md:justify-evenly md:items-stretch min-h-screen bg-hero-pattern bg-cover p-4"
-            >
+            <h2 className="text-center mb-0" id="mywork">
+                Discover my work
+            </h2>
+            <div className="flex flex-col gap-8 items-center justify-center md:flex-wrap md:flex-row md:justify-evenly md:items-stretch min-h-screen p-4">
                 <ProjectCard
                     title="GreenFrame"
                     subtitle="Carbon footprint calculator for applications."
@@ -56,6 +57,7 @@ export default function Home() {
                     title="Yousign"
                     subtitle="SaaS Application of electronic signature"
                     image="/yousign.png"
+                    href="useCases/yousign"
                     altImage="Screenshot of Yousign Application"
                 />
                 <ProjectCard
@@ -83,27 +85,6 @@ export default function Home() {
                     altImage="Logo of University of Caen, Normandy"
                 />
             </div>
-
-            <footer className="flex justify-center gap-3 w-full h-24">
-                <a
-                    className="flex items-center justify-center"
-                    href="https://linkedin.com/clebiez"
-                >
-                    <FaLinkedin className="text-4xl" />
-                </a>
-                <a
-                    className="flex items-center justify-center"
-                    href="https://github.com/clebiez"
-                >
-                    <FaGithub className="text-4xl " />
-                </a>
-                <a
-                    className="flex items-center justify-center"
-                    href="https://twitter.com/clebiez"
-                >
-                    <FaTwitter className="text-4xl" />
-                </a>
-            </footer>
-        </>
+        </MainLayout>
     )
 }
