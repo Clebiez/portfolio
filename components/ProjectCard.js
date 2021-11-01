@@ -2,9 +2,11 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { FiArrowRight } from 'react-icons/fi'
+
 const ProjectCard = ({ title, subtitle, image, altImage, href }) => {
     return (
-        <div className="card flex flex-col justify-start my-12 bg-white shadow-2xl rounded-xl overflow-hidden">
+        <div className="group card flex flex-col justify-start my-12 bg-white shadow-xl transition-all hover:shadow-2xl rounded-xl overflow-hidden">
             <Link href={href} passHref>
                 <a>
                     <div className="w-full">
@@ -19,8 +21,9 @@ const ProjectCard = ({ title, subtitle, image, altImage, href }) => {
                         )}
                     </div>
                     <div className="flex flex-col justify-start w-full p-2 md:p-6 z-10">
-                        <h2 className="text-xl md:text-3xl font-sans font-extrabold">
-                            {title}
+                        <h2 className=" flex items-center gap-2 text-xl md:text-3xl font-sans font-extrabold">
+                            {title}{' '}
+                            <FiArrowRight className="font-normal transition-all group-hover:ml-5" />
                         </h2>
                         <p className="text-base md:text-xl font-sans font-extrabold text-gray-600">
                             {subtitle}
