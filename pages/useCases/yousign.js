@@ -13,8 +13,8 @@ export default function Home() {
             <ArticleLayout>
                 <h1>Lead Front-end Developer @ Yousign</h1>
                 <p>
-                    Yousign is a startup founded in 2013, they have now more
-                    than 100 employees now but when I started in 2016,{' '}
+                    Yousign is a startup founded in 2013, they have more than
+                    150 employees now, but when I started in 2016,{' '}
                     <strong>I was the 6th !</strong>
                 </p>
                 <Image
@@ -27,10 +27,9 @@ export default function Home() {
                 />
                 <h2>Yousign: Signature Electronic SaaS application</h2>
                 <p>
-                    Yousign is company which provide{' '}
+                    Yousign is company which provides{' '}
                     <strong>SaaS based applications</strong> in order simplify
-                    and make faster electronic signature of all kinds of
-                    documents.
+                    electronic signature of all kinds of documents.
                     <br />
                     From School to Banks or Insurances. All companies have to
                     sign documents !
@@ -43,7 +42,7 @@ export default function Home() {
                 />
                 <p>
                     When I started at Yousign, I was the first front-end
-                    developer and everything was to built.
+                    developer and everything was to build.
                     <br />
                     It was a very exciting and challenging job to designing and
                     construct the whole front-end architecture during almost 5
@@ -58,12 +57,10 @@ export default function Home() {
                 <p>
                     Our applications were created by using Symfony as a REST API
                     and JS Frameworks for the front-end side. Before 2018,
-                    applications was developed in <strong>AngularJS</strong> but
-                    after it was deprecated in favor of Angular 2, we have
-                    decided to migrate on <strong>React</strong> for
-                    performances purposes and developer experience (In 2018
-                    React community was bigger and more engaged than the Angular
-                    Community). Everything was to rebuilt again.
+                    applications were developed in <strong>AngularJS</strong>{' '}
+                    but after it was deprecated in favor of Angular 2, we have
+                    decided to migrate on <strong>React</strong> for performance
+                    purposes and developer experience.
                 </p>
                 <Image
                     alt="Screenshot of dashboard Yousign App"
@@ -73,15 +70,15 @@ export default function Home() {
                 />
                 <p>
                     This migration was very interesting, because we can&amp;t
-                    stop the service to migrate every customers on the new
+                    stop the service to migrate every customer on the new
                     application, the first have to continue every time it was
                     useful.
                 </p>
                 <p>
-                    This big transition has impacted every teams and we have to
+                    This big transition has impacted every team and we have to
                     strongly collaborate to make the switch from the first
-                    application to the second with less contraints for our
-                    customers.
+                    application to the second with less constraints as possible
+                    for our customers.
                 </p>
                 <h2>Team cohesion</h2>
                 <p>
@@ -94,8 +91,8 @@ export default function Home() {
                     I was also in charge to assist others developers in order to
                     increase their skills on our projects. It was very important
                     for me because you have to feel good and useful where your
-                    work. You spent 38 hours per weeks to works in team and this
-                    environment must be completely benevolent and pleasant.
+                    work. You spent 38 hours per weeks to work in a team and
+                    this environment must be completely benevolent and pleasant.
                     <br />I have taken this responsibility to heart.
                 </p>
                 <h2>Design system of Components</h2>
@@ -109,7 +106,7 @@ export default function Home() {
                     We used Storybook to achieve this, and have listed{' '}
                     <strong>around 50 components</strong>. Each of theses was
                     built to be generic, agnostic and configurable by props
-                    everywhere we need it.
+                    everywhere we need them.
                 </p>
                 <p>
                     Also we construct the whole application by following the
@@ -128,7 +125,7 @@ export default function Home() {
                 <h2>Software quality</h2>
                 <p>
                     Each kind of enterprises have contractual process or
-                    specifities during a signature phase.
+                    specificities during a signature phase.
                     <br />
                     <em>
                         (e.g After receiving a sales agreement for buying a
@@ -140,7 +137,7 @@ export default function Home() {
                 <p>
                     This is why we have implemented a very complex toggle
                     feature in order to enable or disable easily theses
-                    specifities.
+                    specificities.
                 </p>
                 <Image
                     alt="Screenshot to illustrate a process of signature"
@@ -152,12 +149,12 @@ export default function Home() {
                     Obviously, we can&apos;t provide a stable complex
                     application without developing automated testing.
                     <br />
-                    That&apos;s why we have implemented a large panel of test.
+                    That&apos;s why we have implemented a large panel of tests.
                     From unit test with Karma or Jest to E2E test with Cypress.
                     <br />
                     All of theses tests were executed in CI in order to be sure
                     every time we deploy something in production, we can&apos;t
-                    any regression.
+                    have any regression.
                 </p>
             </ArticleLayout>
         </>
