@@ -4,7 +4,15 @@ import Link from 'next/link'
 
 import { FiArrowRight } from 'react-icons/fi'
 
-const ProjectCard = ({ title, subtitle, image, altImage, href }) => {
+const ProjectCard = ({
+    title,
+    subtitle,
+    image,
+    imageWidth,
+    imageHeight,
+    altImage,
+    href,
+}) => {
     return (
         <div className="group card flex flex-col justify-start my-12 bg-white shadow-xl transition-all hover:shadow-2xl rounded-xl overflow-hidden">
             <Link href={href} passHref>
@@ -14,8 +22,8 @@ const ProjectCard = ({ title, subtitle, image, altImage, href }) => {
                             <Image
                                 src={image}
                                 alt={altImage}
-                                width="700"
-                                height="350"
+                                width={imageWidth}
+                                height={imageHeight}
                                 layout="responsive"
                             />
                         )}

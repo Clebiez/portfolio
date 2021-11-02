@@ -1,13 +1,11 @@
 import Head from 'next/head'
 import ArticleLayout from '../../layouts/ArticleLayout'
 import Image from '../../components/Image'
-export default function Home() {
+export default function YousignUseCase() {
     return (
         <>
             <Head>
-                <title>
-                    Clement Le Biez Fullstack Web &amp; Mobile Developer
-                </title>
+                <title>Lead Front-end Developer @ Yousign</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <ArticleLayout>
@@ -39,6 +37,7 @@ export default function Home() {
                     src="/yousign/swipe.png"
                     width="2880"
                     height="1800"
+                    size="2xl"
                 />
                 <p>
                     When I started at Yousign, I was the first front-end
@@ -67,6 +66,7 @@ export default function Home() {
                     src="/yousign/dashboard.png"
                     width="2880"
                     height="1800"
+                    size="2xl"
                 />
                 <p>
                     This migration was very interesting, because we can&amp;t
@@ -121,6 +121,7 @@ export default function Home() {
                     src="/yousign/storybook.png"
                     width="2880"
                     height="1800"
+                    size="2xl"
                 />
                 <h2>Software quality</h2>
                 <p>
@@ -144,6 +145,7 @@ export default function Home() {
                     src="/yousign/workflow.png"
                     width="2880"
                     height="1800"
+                    size="2xl"
                 />
                 <p>
                     Obviously, we can&apos;t provide a stable complex

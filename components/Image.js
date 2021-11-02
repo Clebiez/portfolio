@@ -4,11 +4,7 @@ const Image = (props) => (
     <figure className="my-8">
         <div
             className={`${
-                props?.size === 'sm'
-                    ? 'max-w-sm'
-                    : props?.size === 'md'
-                    ? 'max-w-md'
-                    : 'max-w-lg'
+                props?.size ? `max-w-${props.size}` : 'max-w-lg'
             } m-auto ${
                 !props.noCard && 'rounded-xl shadow-xl overflow-hidden'
             }`}

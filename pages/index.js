@@ -4,7 +4,7 @@ import ProjectCard from '../components/ProjectCard'
 import AvatarFlip from '../components/AvatarFlip'
 import MainLayout from '../layouts/MainLayout'
 
-import greenframeImage from '../public/greenframe.png'
+import greenframeImage from '../public/greenframe/analysis.png'
 import yousignImage from '../public/yousign/swipe.png'
 import play2meetyouImage from '../public/play2meetyou.jpg'
 import hoheyImage from '../public/hohey.jpeg'
@@ -58,12 +58,17 @@ export default function Home() {
                     title="GreenFrame"
                     subtitle="Carbon footprint calculator for applications."
                     image={greenframeImage}
+                    imageWidth="1479"
+                    imageHeight="937"
+                    href="useCases/greenframe"
                     altImage="Screenshot of GreenFrame.io"
                 />
                 <ProjectCard
                     title="Yousign"
                     subtitle="SaaS Application of electronic signature"
                     image={yousignImage}
+                    imageWidth="2880"
+                    imageHeight="1800"
                     href="useCases/yousign"
                     altImage="Screenshot of Yousign Application"
                 />
@@ -71,24 +76,32 @@ export default function Home() {
                     title="Play2MeetYou"
                     subtitle="Mobile application to remistify the meeting."
                     image={play2meetyouImage}
+                    imageWidth="2500"
+                    imageHeight="1250"
                     altImage="Multiple smartphones containing screenshots of Play2MeetYou"
                 />
                 <ProjectCard
                     title="HoHey"
                     subtitle="Ski resorts comparator"
                     image={hoheyImage}
+                    imageWidth="1680"
+                    imageHeight="952"
                     altImage="Screenshot of HoHey homepage"
                 />
                 <ProjectCard
                     title="Facilitation"
                     subtitle="Scrum Master and Facilitator of agile workshops."
                     image={facilitationImage}
+                    imageWidth="1050"
+                    imageHeight="700"
                     altImage="Screenshot of agile workshop"
                 />
                 <ProjectCard
                     title="Teaching"
                     subtitle="Teaching in Agile Project Management."
                     image={unicaenImage}
+                    imageWidth="1200"
+                    imageHeight="600"
                     altImage="Logo of University of Caen, Normandy"
                 />
             </div>
