@@ -7,7 +7,7 @@ import MainLayout from '../layouts/MainLayout'
 import greenframeImage from '../public/greenframe/analysis.png'
 import yousignImage from '../public/yousign/swipe.png'
 import play2meetyouImage from '../public/play2meetyou.jpg'
-import hoheyImage from '../public/hohey.jpeg'
+import hoheyImage from '../public/hohey/home.jpeg'
 import unicaenImage from '../public/unicaen.png'
 import facilitationImage from '../public/facilitation.jpeg'
 
@@ -73,12 +73,12 @@ export default function Home() {
                     altImage="Screenshot of Yousign Application"
                 />
                 <ProjectCard
-                    title="Play2MeetYou"
-                    subtitle="Mobile application to remistify the meeting."
-                    image={play2meetyouImage}
-                    imageWidth="2500"
-                    imageHeight="1250"
-                    altImage="Multiple smartphones containing screenshots of Play2MeetYou"
+                    title="Teaching"
+                    subtitle="Teaching in Agile Project Management."
+                    image={unicaenImage}
+                    imageWidth="1200"
+                    imageHeight="600"
+                    altImage="Logo of University of Caen, Normandy"
                 />
                 <ProjectCard
                     title="HoHey"
@@ -86,7 +86,16 @@ export default function Home() {
                     image={hoheyImage}
                     imageWidth="1680"
                     imageHeight="952"
+                    href="useCases/hohey"
                     altImage="Screenshot of HoHey homepage"
+                />
+                <ProjectCard
+                    title="Play2MeetYou"
+                    subtitle="Mobile application to remistify the meeting."
+                    image={play2meetyouImage}
+                    imageWidth="2500"
+                    imageHeight="1250"
+                    altImage="Multiple smartphones containing screenshots of Play2MeetYou"
                 />
                 <ProjectCard
                     title="Facilitation"

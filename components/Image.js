@@ -4,7 +4,9 @@ const Image = (props) => (
     <figure className="my-8">
         <div
             className={`${
-                props?.size === 'sm'
+                props?.size === 'xs'
+                    ? 'max-w-xs'
+                    : props?.size === 'sm'
                     ? 'max-w-sm'
                     : props?.size === 'md'
                     ? 'max-w-md'
