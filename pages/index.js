@@ -105,14 +105,6 @@ export default function Home() {
                     imageHeight="700"
                     altImage="Screenshot of agile workshop"
                 />
-                <ProjectCard
-                    title="Teaching"
-                    subtitle="Teaching in Agile Project Management."
-                    image={unicaenImage}
-                    imageWidth="1200"
-                    imageHeight="600"
-                    altImage="Logo of University of Caen, Normandy"
-                />
             </div>
         </MainLayout>
     )
