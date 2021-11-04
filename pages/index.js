@@ -72,7 +72,7 @@ export default function Home() {
                     href="use-cases/yousign"
                     altImage="Screenshot of Yousign Application"
                 />
-                <ProjectCard
+                {/* <ProjectCard
                     title="Teaching"
                     subtitle="Teaching in Agile Project Management."
                     image={unicaenImage}
@@ -80,7 +80,7 @@ export default function Home() {
                     imageHeight="600"
                     href="use-cases/teaching"
                     altImage="Logo of University of Caen, Normandy"
-                />
+                /> */}
                 <ProjectCard
                     title="HoHey"
                     subtitle="Ski resorts comparator"
@@ -90,7 +90,7 @@ export default function Home() {
                     href="use-cases/hohey"
                     altImage="Screenshot of HoHey homepage"
                 />
-                <ProjectCard
+                {/* <ProjectCard
                     title="Play2MeetYou"
                     subtitle="Mobile application to remistify the meeting."
                     image={play2meetyouImage}
@@ -105,7 +105,7 @@ export default function Home() {
                     imageWidth="1050"
                     imageHeight="700"
                     altImage="Screenshot of agile workshop"
-                />
+                /> */}
             </div>
         </MainLayout>
     )
