@@ -28,8 +28,8 @@ const ProjectCard = ({
                             />
                         )}
                     </div>
-                    <div className="flex flex-col justify-start w-full p-2 md:p-6 z-10">
-                        <h2 className=" flex items-center gap-2 text-xl md:text-3xl font-sans font-extrabold">
+                    <div className="flex flex-col justify-start w-full p-2 md:p-4 z-10">
+                        <h2 className="flex items-center gap-2 text-xl md:text-3xl font-sans font-extrabold">
                             {title}{' '}
                             <FiArrowRight className="font-normal transition-all group-hover:ml-5" />
                         </h2>
@@ -44,7 +44,7 @@ const ProjectCard = ({
                     position: relative;
                     cursor: pointer;
                     width: 90%;
-                    max-width: 700px;
+                    max-width: 600px;
                 }
             `}</style>
         </div>

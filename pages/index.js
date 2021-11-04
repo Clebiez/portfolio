@@ -8,7 +8,7 @@ import greenframeImage from '../public/greenframe/analysis.png'
 import yousignImage from '../public/yousign/swipe.png'
 import play2meetyouImage from '../public/play2meetyou.jpg'
 import hoheyImage from '../public/hohey/home.jpeg'
-import unicaenImage from '../public/unicaen.png'
+import unicaenImage from '../public/teaching/logo.png'
 import facilitationImage from '../public/facilitation.jpeg'
 
 export default function Home() {
@@ -53,14 +53,14 @@ export default function Home() {
             <h2 className="text-center mb-0" id="mywork">
                 Discover my work
             </h2>
-            <div className="flex flex-col gap-8 items-center justify-center md:flex-wrap md:flex-row md:justify-evenly md:items-stretch min-h-screen p-4">
+            <div className="max-w-7xl m-auto flex flex-col gap-10 items-center justify-center md:flex-wrap md:flex-row md:justify-evenly md:items-stretch min-h-screen p-4">
                 <ProjectCard
                     title="GreenFrame"
                     subtitle="Carbon footprint calculator for applications."
                     image={greenframeImage}
                     imageWidth="1479"
                     imageHeight="937"
-                    href="useCases/greenframe"
+                    href="use-cases/greenframe"
                     altImage="Screenshot of GreenFrame.io"
                 />
                 <ProjectCard
@@ -69,7 +69,7 @@ export default function Home() {
                     image={yousignImage}
                     imageWidth="2880"
                     imageHeight="1800"
-                    href="useCases/yousign"
+                    href="use-cases/yousign"
                     altImage="Screenshot of Yousign Application"
                 />
                 <ProjectCard
@@ -78,6 +78,7 @@ export default function Home() {
                     image={unicaenImage}
                     imageWidth="1200"
                     imageHeight="600"
+                    href="use-cases/teaching"
                     altImage="Logo of University of Caen, Normandy"
                 />
                 <ProjectCard
@@ -86,7 +87,7 @@ export default function Home() {
                     image={hoheyImage}
                     imageWidth="1680"
                     imageHeight="952"
-                    href="useCases/hohey"
+                    href="use-cases/hohey"
                     altImage="Screenshot of HoHey homepage"
                 />
                 <ProjectCard
