@@ -1,7 +1,11 @@
 import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from 'react-icons/fa'
-const Footer = () => (
+import { useTranslation } from 'next-i18next';
+
+const Footer = () => {
+    const {t} = useTranslation('common'); 
+    return (
     <footer className="w-full p-5 text-white bg-gray-800">
-        <h2 className="text-center">Where you can contact me</h2>
+        <h2 className="text-center">{t('footer.title')}</h2>
         <div className="flex justify-center gap-4 my-5">
             <a
                 className="flex items-center justify-center hover:text-indigo-200"
@@ -37,5 +41,15 @@ const Footer = () => (
             </a>
         </div>
     </footer>
-)
+)};
+
+export async function getStaticProps({ locale }) {
+    return {
+      props: {
+        ...(await serverSideTranslations(locale, ['common'])),
+        // Will be passed to the page component as props
+      },
+    };
+  }
+  
 export default Footer

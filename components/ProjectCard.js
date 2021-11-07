@@ -24,7 +24,7 @@ const ProjectCard = ({
                                 alt={altImage}
                                 width={imageWidth}
                                 height={imageHeight}
-                                layout="responsive"
+                                layout="intrinsic"
                             />
                         )}
                     </div>

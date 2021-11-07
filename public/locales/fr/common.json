@@ -1,0 +1,42 @@
+{
+    "meta_title": "Clément Le Biez Développeur Fullstack Web & Mobile",
+    "name": "Clément Le Biez",
+    "title": "Développeur Fullstack Web & Mobile",
+    "introduction_1": "Développeur Fullstack Web & Mobile avec 6 ans d'expérience, je suis passionné par le développement d'applications accessibles et performantes.",
+    "introduction_2": "Je suis attaché aux méthodologies agiles et je maitrîse la chaine de conceptin de bout en bout.",
+    "introduction_3": "De l'expression des besoins utilisateurs au développement Front-end et Back-end, en passant par le déploiement automatisé sur une infrastructure.",
+    "my_work": {
+        "button": "Mes projets",
+        "title": "Découvrez mes projets"
+    },
+    "projects": {
+        "greenframe": {
+            "title": "GreenFrame",
+            "subtitle": "Calculateur d'empreinte carbone pour applications webs.",
+            "alt_image": "Capture d'écran de GreenFrame.io"
+        },
+        "yousign": {
+            "title": "Yousign",
+            "subtitle": "Application SaaS de signature électronique.",
+            "alt_image": "Capture d'écran de l'application Yousign"
+        },
+        "unicaen": {
+            "title": "Enseignement",
+            "subtitle": "Enseignant en gestion de projet Agile.",
+            "alt_image": "Photographie de l'université de Caen Normandie"
+        },
+        "hohey": {
+            "title": "HoHey",
+            "subtitle": "Comparateur de station de skis.",
+            "alt_image": "Capture d'écran de HoHey"
+        }
+    },
+    "nav": {
+        "open_menu": "Ouvrir le menu principal",
+        "home": "Accueil",
+        "my_work": "Mes projets"
+    },
+    "footer": {
+        "title": "Contactez-moi avec plaisir !"
+    }
+}

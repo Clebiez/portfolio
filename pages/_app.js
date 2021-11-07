@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { appWithTranslation } from 'next-i18next'
 import '../styles/global.css'
 
 function MyApp({ Component, pageProps }) {
@@ -33,4 +34,20 @@ function MyApp({ Component, pageProps }) {
     )
 }
 
-export default MyApp
+const i18nOptions = {
+    i18n: {
+        react: {
+            transKeepBasicHtmlNodesFor: [
+                'br',
+                'i',
+                'b',
+                'p',
+                'strong',
+                'bold',
+                'em',
+            ],
+            transSupportBasicHtmlNodes: true,
+        },
+    },
+}
+export default appWithTranslation(MyApp, i18nOptions)

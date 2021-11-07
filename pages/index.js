@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
 import ProjectCard from '../components/ProjectCard'
 import AvatarFlip from '../components/AvatarFlip'
@@ -8,15 +10,16 @@ import greenframeImage from '../public/greenframe/analysis.png'
 import yousignImage from '../public/yousign/swipe.png'
 import play2meetyouImage from '../public/play2meetyou.jpg'
 import hoheyImage from '../public/hohey/home.jpeg'
-import unicaenImage from '../public/teaching/logo.png'
+import unicaenImage from '../public/teaching/unicaen.jpg'
 import facilitationImage from '../public/facilitation.jpeg'
 
-export default function Home() {
+const Home =() => {
+    const {t} = useTranslation('common');
     return (
         <MainLayout>
             <Head>
                 <title>
-                    Clement Le Biez Fullstack Web &amp; Mobile Developer
+                    {t('meta_title')}
                 </title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
@@ -25,70 +28,65 @@ export default function Home() {
                 <main className="w-full m-auto p-5 flex flex-col items-center justify-center rounded-2xl text-center bg-gray-50 bg-opacity-50">
                     <AvatarFlip />
                     <h1 className="mt-12 text-4xl font-bold font-sans text-gray-800">
-                        Clement Le Biez
+                        {t('name')}
                     </h1>
                     <h2 className="mt-4 text-3xl font-bold text-gray-800">
-                        FullStack Web &amp; Mobile Developer
+                        {t('title')}
                     </h2>
                     <p className="mt-4 text-xl  text-left">
-                        Fullstack web and mobile developer with 6 years of
-                        experience, I&apos;m passionated about developing
-                        accessible, secure and powerful applications.
+                        {t('introduction_1')}
                         <br />
-                        I&apos;m a fan of the agile methodology and I master the
-                        design chain of an application from start to finish.
+                        {t('introduction_2')}
                         <br />
-                        From the expression of user needs to front-end and
-                        back-end development including the deployment on an
-                        automated infrastructure.
+                        {t('introduction_3')}
                     </p>
                     <a
                         href="#mywork"
                         className="flex items-center justify-center mt-8 p-3 px-8 rounded-full text-base bg-green-300 font-sans font-black uppercase text-gray-800"
                     >
-                        📔 Portfolio
+                        📔 {t('my_work.button')}
                     </a>
                 </main>
             </div>
             <h2 className="text-center mb-0" id="mywork">
-                Discover my work
+                {t('my_work.title')}
             </h2>
             <div className="max-w-7xl m-auto flex flex-col gap-10 items-center justify-center md:flex-wrap md:flex-row md:justify-evenly md:items-stretch min-h-screen p-4">
                 <ProjectCard
-                    title="GreenFrame"
-                    subtitle="Carbon footprint calculator for applications."
+                    title={t('projects.greenframe.title')}
+                    subtitle={t('projects.greenframe.subtitle')}
                     image={greenframeImage}
                     imageWidth="1479"
                     imageHeight="937"
                     href="use-cases/greenframe"
-                    altImage="Screenshot of GreenFrame.io"
+                    altImage={t('projects.greenframe.alt_image')}
                 />
                 <ProjectCard
-                    title="Yousign"
-                    subtitle="SaaS Application of electronic signature"
+                    title={t('projects.yousign.title')}
+                    subtitle={t('projects.yousign.subtitle')}
                     image={yousignImage}
                     imageWidth="2880"
                     imageHeight="1800"
                     href="use-cases/yousign"
-                    altImage="Screenshot of Yousign Application"
+                    altImage={t('projects.yousign.alt_image')}
                 />
-                {/* <ProjectCard
-                    title="Teaching"
-                    subtitle="Teaching in Agile Project Management."
-                    image={unicaenImage}
-                    imageWidth="1200"
-                    imageHeight="600"
-                    href="use-cases/teaching"
-                    altImage="Logo of University of Caen, Normandy"
-                /> */}
                 <ProjectCard
-                    title="HoHey"
-                    subtitle="Ski resorts comparator"
+                    title={t('projects.unicaen.title')}
+                    subtitle={t('projects.unicaen.subtitle')}
+                    image={unicaenImage}
+                    imageWidth="1500"
+                    imageHeight="850"
+                    href="use-cases/teaching"
+                    altImage={t('projects.unicaen.alt_image')}
+                />
+                <ProjectCard
+                    title={t('projects.hohey.title')}
+                    subtitle={t('projects.hohey.subtitle')}
                     image={hoheyImage}
                     imageWidth="1680"
                     imageHeight="952"
                     href="use-cases/hohey"
-                    altImage="Screenshot of HoHey homepage"
+                    altImage={t('projects.hohey.alt_image')}
                 />
                 {/* <ProjectCard
                     title="Play2MeetYou"
@@ -110,3 +108,14 @@ export default function Home() {
         </MainLayout>
     )
 }
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+      // Will be passed to the page component as props
+    },
+  };
+}
+
+export default Home;

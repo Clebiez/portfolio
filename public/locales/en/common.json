@@ -1,0 +1,42 @@
+{
+    "meta_title": "Clement Le Biez Fullstack Web & Mobile Developer",
+    "name": "Clement Le Biez",
+    "title": "FullStack Web & Mobile Developer",
+    "introduction_1": "Fullstack web and mobile developer with 6 years of experience, I'm passionated about developing accessible and powerful applications.",
+    "introduction_2": "I'm a fan of the agile methodology and I master the design chain of an application from start to finish.",
+    "introduction_3": "From the expression of user needs to front-end and back-end development including the deployment on an automated infrastructure.",
+    "my_work": {
+        "button": "My work",
+        "title": "Discover my work"
+    },
+    "projects": {
+        "greenframe": {
+            "title": "GreenFrame",
+            "subtitle": "Carbon footprint calculator for web applications.",
+            "alt_image": "Screenshot of GreenFrame.io"
+        },
+        "yousign": {
+            "title": "Yousign",
+            "subtitle": "Electronic Signature SaaS Application.",
+            "alt_image": "Screenshot of Yousign Application"
+        },
+        "unicaen": {
+            "title": "Teaching",
+            "subtitle": "Teacher in Agile Project Management.",
+            "alt_image": "Photography of Caen University"
+        },
+        "hohey": {
+            "title": "HoHey",
+            "subtitle": "Ski resorts comparator.",
+            "alt_image": "Screenshot of HoHey Homepage"
+        }
+    },
+    "nav": {
+        "open_menu": "Open main menu",
+        "home": "Home",
+        "my_work": "My Work"
+    },
+    "footer": {
+        "title": "Contact me with pleasure !"
+    }
+}

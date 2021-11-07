@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+
 import ArticleLayout from '../../layouts/ArticleLayout'
 import Image from '../../components/Image'
 export default function YousignUseCase() {
@@ -161,4 +163,12 @@ export default function YousignUseCase() {
             </ArticleLayout>
         </>
     )
+}
+export async function getStaticProps({ locale }) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common'])),
+            // Will be passed to the page component as props
+        },
+    }
 }
