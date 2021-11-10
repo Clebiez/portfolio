@@ -1,24 +1,22 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import ArticleLayout from '../../layouts/ArticleLayout'
 import Image from '../../components/Image'
+import { useTranslation, Trans } from 'next-i18next'
 
 export default function Teaching() {
+    const { t } = useTranslation('teaching')
     return (
         <>
             <Head>
-                <title>Teacher @ University of Caen</title>
+                <title>{t('meta_title')}</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <ArticleLayout>
-                <h1>Teacher @ University of Caen</h1>
-                <p>
-                    Since 2018 I teach agile project management in University Of
-                    Caen
-                </p>
+                <h1>{t('title')}</h1>
+                <p>{t('resume_1')}</p>
                 <Image
-                    alt="Logo of University of Caen"
+                    alt={t('logo_alt_image')}
                     src="/teaching/logo.png"
                     width="1200"
                     height="600"
@@ -26,110 +24,78 @@ export default function Teaching() {
                     size="xs"
                 />
 
-                <h2>Software creativity: Create your startup</h2>
+                <h2>{t('sc_title')}</h2>
+                <p>{t('sc_1')}</p>
+                <p>{t('sc_2')}</p>
+                <p>{t('sc_3')}</p>
                 <p>
-                    Software creativity is a particular course because we
-                    operate accross 2 different classes, generally with students
-                    in Computing Science Master and Marketting Master.
+                    <Trans i18nKey="sc_4" t={t} />
                 </p>
                 <p>
-                    First, participants mix in teams and find an idea of a
-                    startup project.
+                    <Trans
+                        i18nKey="sc_5"
+                        t={t}
+                        components={[
+                            <a href="https://www.adalo.com/" key="0" />,
+                            <a href="https://bubble.io/" key="1" />,
+                        ]}
+                    />
+                </p>
+                <p>{t('sc_6')}</p>
+                <p>{t('sc_7')}</p>
+                <p>
+                    <Trans i18nKey="sc_8" t={t} />
+                </p>
+                <h2>{t('pm_title')}</h2>
+                <p>
+                    <Trans i18nKey="pm_1" t={t}>
+                        In this course I teach with{' '}
+                        <a href="https://www.linkedin.com/in/jean-luc-lambert-52a27131">
+                            Jean Luc Lambert
+                        </a>{' '}
+                        to Computed Science students how to manage a project and
+                        have a good customer-developer relationship.
+                    </Trans>
                 </p>
                 <p>
-                    During 2 months, they will works on their idea from a
-                    solution to solve to a functional prototype with a business
-                    model. They also have to quantify the public interest by
-                    sharing surveys on social network or maybe going into the
-                    city center by interviewing people.
+                    <Trans i18nKey="pm_2" t={t} />
                 </p>
                 <p>
-                    On my side, I work with students to{' '}
-                    <strong>
-                        teach them the notion of a Minimal Viable product
-                    </strong>
-                    , how to determine which feature we have to include in it
-                    and <strong>how to construct it faster as possible</strong>.
-                    I help them to find the best way to develop a working
-                    prototype very quickly.
-                </p>
-                <p>
-                    Generally, to be faster, we use no code tools like{' '}
-                    <a href="https://www.adalo.com/">Adalo</a> or{' '}
-                    <a href="https://bubble.io/">Bubble</a>.
-                </p>
-                <p>
-                    At the end, we organize a fake crowdfunding public event
-                    where participants will pitch their final product to
-                    investissors and show a demo of their prototypes.
-                </p>
-                <p>
-                    We also recruit fake business angel, they have 25K € to
-                    spent on one or multiple projects, and the final amount
-                    recolted will be a part of the final grade.
-                </p>
-                <p>
-                    <strong>
-                        Some of our students have decided after this course to
-                        continue with their start-up project in the real life.
-                    </strong>
-                </p>
-                <h2>Project Management: The customer-developer relationship</h2>
-                <p>
-                    In this course I teach with{' '}
-                    <a href="https://www.linkedin.com/in/jean-luc-lambert-52a27131">
-                        Jean Luc Lambert
-                    </a>{' '}
-                    to Computed Science students how to manage a project and
-                    have a good customer-developer relationship.
-                </p>
-                <p>
-                    The main message is:{' '}
-                    <strong>
-                        A successful project starts with a thorough
-                        understanding of the customer&apos;s needs. So look up
-                        from your keyboard !
-                    </strong>
-                </p>
-                <p>
-                    This teaching is divided into several stages:
+                    {t('pm_3')}
                     <ol className="list-decimal pl-10">
+                        <li>{t('pm_list_item_1')}</li>
                         <li>
-                            Customer explain the need but most informations are
-                            missing. Students have to ask all questions needed
-                            to extract what the customer really want.
+                            <Trans i18nKey="pm_list_item_2" t={t}>
+                                Students list and prioritise features in a{' '}
+                                <a href="https://www.agilealliance.org/glossary/backlog">
+                                    product backlog
+                                </a>
+                                .
+                            </Trans>
                         </li>
                         <li>
-                            Students list and prioritise features in a{' '}
-                            <a href="https://www.agilealliance.org/glossary/backlog">
-                                product backlog
-                            </a>
-                            .
-                        </li>
-                        <li>
-                            Then they draw a very simple wireframe by using{' '}
+                            {t('pm_list_item_3')}{' '}
                             <a href="https://marvelapp.com/">Marvel App</a>.
                         </li>
                         <li>
-                            They create a Trello to organize the development
-                            team. I challenge them on the technical feasibility
-                            and push them to discuss a simple and viable
-                            solution. This is{' '}
-                            <a href="https://en.wikipedia.org/wiki/Planning_poker">
-                                Poker planning
-                            </a>{' '}
-                            like step
+                            <Trans i18nKey="pm_list_item_4" t={t}>
+                                They create a Trello to organize the development
+                                team. I challenge them on the technical
+                                feasibility and push them to discuss a simple
+                                and viable solution. This is{' '}
+                                <a href="https://en.wikipedia.org/wiki/Planning_poker">
+                                    Poker planning
+                                </a>{' '}
+                                like step
+                            </Trans>
                         </li>
                         <li>
-                            <strong>Everything is done</strong>, the teaching is
-                            now finished and they are ready to develop this
-                            product.
+                            <Trans i18nKey="pm_list_item_5" t={t} />
                         </li>
                     </ol>
                 </p>
                 <p>
-                    During this teaching, we acted as customers who{' '}
-                    <strong>know nothing about computer science</strong>.
+                    <Trans i18nKey="pm_4" t={t} />
                 </p>
             </ArticleLayout>
         </>
@@ -138,7 +104,7 @@ export default function Teaching() {
 export async function getStaticProps({ locale }) {
     return {
         props: {
-            ...(await serverSideTranslations(locale, ['common'])),
+            ...(await serverSideTranslations(locale, ['common', 'teaching'])),
             // Will be passed to the page component as props
         },
     }

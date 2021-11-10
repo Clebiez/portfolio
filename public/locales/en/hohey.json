@@ -1,0 +1,21 @@
+{
+    "title": "Front-End Developer @ HoHey",
+    "resume_1": "HoHey was a Ski resorts comparator imagined by <0>Romain Pichard</0>,<1>Jérémy Leherpeur</1> and <2>Kevin Dubourg</2>",
+    "resume_2": "This project was developed in Angular and Symfony. I worked as a Freelance to develop the front side, <0>Kévin Bizien </0> was to the design part and Jérémy created the back-end.",
+    "logo_alt_image": "HoHey Logo",
+    "mvp_title": "From Idea to MVP",
+    "mvp_1": "How can we simply find the ski resort that suits us best? It&apos;s not easy to compare several different and incomplete sources quickly and efficiently. Hohey is born to resolve this issue.",
+    "home_alt_image": "Screenshoft of the Home Page",
+    "mvp_2": "The MVP of this app was to be able to find in one place all informations about ski resorts: Price, activities, services etc. And to be able to compare ski resorts with each other.",
+    "search_result_alt_image": "Search result page with ski resorts and a map",
+    "mvp_3": "In the future, HoHey want to become the app to use by allowing you to rent your equipment or book your accomodation directly on the app.",
+    "agile_title": "An Agile Project",
+    "agile_1": "This project was a startup project, we don&apos;t have a large budget, this means we didn&apos;t have all the time we want to achieve a MVP. In this case, a good project management is essential.",
+    "agile_2": "We have to be sure every features we implement inside the product will deserve the product and be essential.",
+    "agile_3": "The main question was: <strong>If we remove this functionality, does the product still make sense? </strong> If the answer is yes, then this feature is not a part of the MVP.",
+    "rent_alt_image": "Page for renting your equipment",
+    "role_title": "My role",
+    "role_1": "Jérémy, the back-end developer, was completely able to also work on the front-end part without my help. My tasks were to:",
+    "role_item_1": "Develop a front-end app with <strong>good foundation</strong>, with isolated modules, services, in a short time.",
+    "role_item_2": "<strong>Develop reusable and good sized component </strong> that we can integrate as lego bricks on a page t construct it faster."
+}

@@ -2,138 +2,107 @@ import Head from 'next/head'
 import ArticleLayout from '../../layouts/ArticleLayout'
 import Image from '../../components/Image'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation, Trans } from 'next-i18next'
 
 export default function HoHeyUseCase() {
+    const { t } = useTranslation('hohey')
     return (
         <>
             <Head>
-                <title>Front-End Developer @ HoHey</title>
+                <title>{t('title')}</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <ArticleLayout>
-                <h1>Front-End Developer @ HoHey</h1>
+                <h1>{t('title')}</h1>
                 <p>
-                    HoHey was a Ski resorts comparator imagined by{' '}
-                    <a
-                        href="https://twitter.com/cheupi"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        Romain Pichard
-                    </a>
-                    ,{' '}
-                    <a
-                        href="https://twitter.com/Jleherpeur"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        Jérémy Leherpeur
-                    </a>{' '}
-                    and{' '}
-                    <a
-                        href="https://www.linkedin.com/in/kevin-dubourg-586351146/"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        Kevin Dubourg
-                    </a>
+                    <Trans
+                        i18nKey="resume_1"
+                        t={t}
+                        components={[
+                            <a
+                                href="https://twitter.com/cheupi"
+                                target="_blank"
+                                rel="noreferrer"
+                                key="twitter-cheupi"
+                            />,
+                            <a
+                                href="https://twitter.com/Jleherpeur"
+                                target="_blank"
+                                rel="noreferrer"
+                                key="twitter-jl"
+                            />,
+                            <a
+                                href="https://www.linkedin.com/in/kevin-dubourg-586351146"
+                                target="_blank"
+                                rel="noreferrer"
+                                key="twitter-kevd"
+                            />,
+                        ]}
+                    />
                 </p>
                 <p>
-                    This project was developed in Angular and Symfony. I worked
-                    as a Freelance to develop the front side,{' '}
-                    <a
-                        href="https://twitter.com/KBizien"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        Kévin Bizien
-                    </a>{' '}
-                    was to the design part and Jérémy created the back-end.
+                    <Trans
+                        i18nKey="resume_2"
+                        t={t}
+                        components={[
+                            <a
+                                key="0"
+                                href="https://twitter.com/KBizien"
+                                target="_blank"
+                                rel="noreferrer"
+                            />,
+                        ]}
+                    />
                 </p>
                 <Image
-                    alt="HoHey Logo"
+                    alt={t('logo_alt_image')}
                     src="/hohey/logo.png"
                     width="583"
                     height="569"
                     noCard
                     size="xs"
                 />
-                <h2>From Idea to MVP</h2>
-                <p>
-                    How can we simply find the ski resort that suits us best?
-                    It&apos;s not easy to compare several different and
-                    incomplete sources quickly and efficiently. Hohey is born to
-                    resolve this issue.
-                </p>
+                <h2>{t('mvp_title')}</h2>
+                <p>{t('mvp_1')}</p>
                 <Image
-                    alt="HoHey Home page"
+                    alt={t('home_alt_image')}
                     src="/hohey/home.jpeg"
                     width="1680"
                     height="952"
                     size="2xl"
                 />
-                <p>
-                    The MVP of this app was to be able to find in one place all
-                    informations about ski resorts: Price, activities, services
-                    etc. And to be able to compare ski resorts with each other.
-                </p>
+                <p>{t('mvp_2')}</p>
                 <Image
-                    alt="Search result page with ski resorts and a map"
+                    alt={t('search_result_alt_image')}
                     src="/hohey/searchResult2.png"
                     width="1920"
                     height="1080"
                     size="2xl"
                 />
-                <p>
-                    In the future, HoHey want to become the app to use by
-                    allowing you to rent your equipment or book your
-                    accomodation directly on the app.
-                </p>
+                <p>{t('mvp_3')}</p>
 
-                <h2>An Agile Project</h2>
+                <h2>{t('agile_title')}</h2>
+                <p>{t('agile_1')}</p>
+                <p>{t('agile_2')}</p>
                 <p>
-                    This project was a startup project, we don&apos;t have a
-                    large budget, this means we didn&apos;t have all the time we
-                    want to achieve a MVP. In this case, a good project
-                    management is essential.
-                </p>
-                <p>
-                    We have to be sure every features we implement inside the
-                    product will deserve the product and be essential.
-                </p>
-                <p>
-                    The main question was:{' '}
-                    <strong>
-                        If we remove this functionality, does the product still
-                        make sense?
-                    </strong>{' '}
-                    If the answer is yes, then this feature is not a part of the
-                    MVP.
+                    <Trans i18nKey="agile_3" t={t} />
                 </p>
                 <Image
-                    alt="Page for renting your equipment"
+                    alt={t('rent_alt_image')}
                     src="/hohey/stuffRent.png"
                     width="1680"
                     height="952"
                     size="2xl"
                 />
-                <h2>My role</h2>
+                <h2>{t('role_title')}</h2>
                 <p>
-                    Jérémy, the back-end developer, was completely able to also
-                    work on the front-end part without my help. My tasks were
-                    to:
+                    {t('role_1')}
                     <ul className="list-disc pl-10 p-5">
                         <li>
-                            Develop a front-end app with{' '}
-                            <strong>good foundation</strong>, with isolated
-                            modules, services, in a short time.
+                            <Trans i18nKey="role_item_1" t={t} />
                         </li>
                         <li>
-                            <strong>
-                                Develop reusable and good sized components
-                            </strong>{' '}
-                            that we can integrate as lego bricks on a page to
-                            construct it faster.
+                            <Trans i18nKey="role_item_2" t={t} />
                         </li>
                     </ul>
                 </p>
@@ -144,7 +113,7 @@ export default function HoHeyUseCase() {
 export async function getStaticProps({ locale }) {
     return {
         props: {
-            ...(await serverSideTranslations(locale, ['common'])),
+            ...(await serverSideTranslations(locale, ['common', 'hohey'])),
             // Will be passed to the page component as props
         },
     }
