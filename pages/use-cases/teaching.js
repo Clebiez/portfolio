@@ -25,7 +25,32 @@ export default function Teaching() {
                 />
 
                 <h2>{t('sc_title')}</h2>
-                <p>{t('sc_1')}</p>
+                <p>
+                    <Trans
+                        i18nKey="sc_1"
+                        t={t}
+                        components={[
+                            <a
+                                key="0"
+                                href="https://www.linkedin.com/in/jean-luc-lambert-52a27131"
+                                target="_blank"
+                                rel="noreferrer"
+                            />,
+                            <a
+                                key="1"
+                                href="https://www.linkedin.com/in/michaelpoifol/"
+                                target="_blank"
+                                rel="noreferrer"
+                            />,
+                            <a
+                                key="2"
+                                href="https://www.linkedin.com/in/jérémie-julou-6ba94115"
+                                target="_blank"
+                                rel="noreferrer"
+                            />,
+                        ]}
+                    />
+                </p>
                 <p>{t('sc_2')}</p>
                 <p>{t('sc_3')}</p>
                 <p>
@@ -48,14 +73,18 @@ export default function Teaching() {
                 </p>
                 <h2>{t('pm_title')}</h2>
                 <p>
-                    <Trans i18nKey="pm_1" t={t}>
-                        In this course I teach with{' '}
-                        <a href="https://www.linkedin.com/in/jean-luc-lambert-52a27131">
-                            Jean Luc Lambert
-                        </a>{' '}
-                        to Computed Science students how to manage a project and
-                        have a good customer-developer relationship.
-                    </Trans>
+                    <Trans
+                        i18nKey="pm_1"
+                        t={t}
+                        components={[
+                            <a
+                                key="0"
+                                href="https://www.linkedin.com/in/jean-luc-lambert-52a27131"
+                                target="_blank"
+                                rel="noreferrer"
+                            />,
+                        ]}
+                    ></Trans>
                 </p>
                 <p>
                     <Trans i18nKey="pm_2" t={t} />
