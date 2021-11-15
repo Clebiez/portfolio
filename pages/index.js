@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
 import ProjectCard from '../components/ProjectCard'
 import AvatarFlip from '../components/AvatarFlip'
@@ -13,19 +13,17 @@ import hoheyImage from '../public/hohey/home.jpeg'
 import unicaenImage from '../public/teaching/unicaen.jpg'
 import facilitationImage from '../public/facilitation.jpeg'
 
-const Home =() => {
-    const {t} = useTranslation('common');
+const Home = () => {
+    const { t } = useTranslation('common')
     return (
         <MainLayout>
             <Head>
-                <title>
-                    {t('meta_title')}
-                </title>
+                <title>{t('meta_title')}</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <div className="m-auto flex flex-col items-center justify-center min-h-screen">
-                <main className="w-full m-auto p-5 flex flex-col items-center justify-center rounded-2xl text-center bg-gray-50 bg-opacity-50">
+                <main className="w-full m-auto px-5 py-20 flex flex-col items-center justify-center rounded-2xl text-center bg-gray-50 bg-opacity-50">
                     <AvatarFlip />
                     <h1 className="mt-12 text-4xl font-bold font-sans text-gray-800">
                         {t('name')}
@@ -42,7 +40,7 @@ const Home =() => {
                     </p>
                     <a
                         href="#mywork"
-                        className="flex items-center justify-center mt-8 p-3 px-8 rounded-full text-base bg-green-300 font-sans font-black uppercase text-gray-800"
+                        className="flex link-button items-center justify-center mt-8 p-3 px-8 rounded-full text-base bg-green-300 font-sans font-black uppercase text-gray-800 no-underline hover:no-underline hover:text-gray-900 hover:bg-green-400"
                     >
                         📔 {t('my_work.button')}
                     </a>
@@ -110,12 +108,12 @@ const Home =() => {
 }
 
 export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['common'])),
-      // Will be passed to the page component as props
-    },
-  };
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common'])),
+            // Will be passed to the page component as props
+        },
+    }
 }
 
-export default Home;
+export default Home

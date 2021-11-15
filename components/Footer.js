@@ -17,7 +17,7 @@ const Footer = () => {
             </a>
             <a
                 className="flex items-center justify-center hover:text-indigo-200"
-                href="https://linkedin.com/in//clebiez"
+                href="https://linkedin.com/in/clebiez"
                 target="_blank"
                 rel="noreferrer"
             >
