@@ -1,0 +1,22 @@
+{
+    "title": "Développeur Front-End @ HoHey",
+    "resume_1": "HoHey est un comparateur de station de skis imaginé par <0>Romain Pichard</0>,<1>Jérémy Leherpeur</1> et <2>Kevin Dubourg</2>.",
+    "resume_2": "Ce projest est développé en Angular et Symfony. J'ai travaillé en tant que Freelance pour développer la partie front-end, <0>Kévin Bizien</0> a réalisé le design et Jérémy a créé le back-end.",
+    "logo_alt_image": "HoHey Logo",
+    "mvp_title": "D'une idée à un MVP",
+    "mvp_1": "Comment pouvons nous simplement trouver la station de ski qui nous correspond le mieux ? Ce n'est pas facile de comparer plusieurs sources différentes et incomplètes rapidement et de manière efficace. HoHey est né pour répondre à ce problème.",
+    "home_alt_image": "Capture d'écran de la page d'Accueil",
+    "mvp_2": "La première version de l'application, le <0>Minimum Viable Product</0>, est de centraliser toutes les informations à propos des stations de skis: Prix, activités, services etc... Et d'être capable de comparé une station avec une autre.",
+    "search_result_alt_image": "Page de résultat d'une recherce avec les stations de ski et la carte",
+    "mvp_3": "Dans le future, HoHey veut devenir une app proposant de louer les équipements et de réserver votre logement directement sur l'application.",
+    "agile_title": "Un projet Agile",
+    "agile_1": "Ce projest est un projet très jeune, nous n'avons pas un large budget, cela signifie que nous n'avons pas tout le temps que nous voulons pour réaliser ce MVP. Dans ce cas, une bonne gestion de projet est essentielle.",
+    "agile_2": "Nous devons être sûrs que chaque fonctionnalité que nous implémentons dans l'application à sa place et va permettre construire un produit viable.",
+    "agile_3": "La question principale est: <strong>Si nous enlevons cette fonctionnalité, est ce que le produit est tout de même utile ?</strong> Si la réponse est oui, alors la fonctionnalité ne fait pas partie du MVP.",
+    "agile_4": "Avec cette méthode, chaque fonctionnalité est <strong>essentielle et indispensable</strong> pour le produit. Nous réduisons le scope du projet à son minimum afin de pouvoir réduire le temps de développement avant sa mise sur le marché.",
+    "rent_alt_image": "Page pour louer un équipement",
+    "role_title": "Mon rôle",
+    "role_1": "Jérémy, le développeur back, était complètement capable de réaliser également la partie front-end sans mon aide. Ils ont souhaité faire appel à moi pour que je puisse construire l'application en mettant l'accent sur 2 points:",
+    "role_item_1": "Développer une application front avec <strong>une bonne fondation</strong>, avec des modules isolés et des services en peu de temps.",
+    "role_item_2": "<strong>Développer des composants atomiques (cf: <0>Atomic Design par Brad Frost</0>) réutilisables</strong> que nous pouvons intégrer comme des briques de Lego sur une page afin de la construire plus rapidement."
+}

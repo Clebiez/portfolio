@@ -71,7 +71,18 @@ export default function HoHeyUseCase() {
                     height="952"
                     size="2xl"
                 />
-                <p>{t('mvp_2')}</p>
+                <p>
+                    <Trans
+                        i18nKey="mvp_2"
+                        t={t}
+                        components={[
+                            <a
+                                key="0"
+                                href="https://economictimes.indiatimes.com/definition/minimum-viable-product"
+                            />,
+                        ]}
+                    />
+                </p>
                 <Image
                     alt={t('search_result_alt_image')}
                     src="/hohey/searchResult2.png"
@@ -102,7 +113,16 @@ export default function HoHeyUseCase() {
                             <Trans i18nKey="role_item_1" t={t} />
                         </li>
                         <li>
-                            <Trans i18nKey="role_item_2" t={t} />
+                            <Trans
+                                i18nKey="role_item_2"
+                                t={t}
+                                components={[
+                                    <a
+                                        href="https://bradfrost.com/blog/post/atomic-web-design/"
+                                        key="0"
+                                    />,
+                                ]}
+                            />
                         </li>
                     </ul>
                 </p>
