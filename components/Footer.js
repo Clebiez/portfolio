@@ -9,6 +9,8 @@ const Footer = () => {
         <div className="flex justify-center gap-4 my-5">
             <a
                 className="flex items-center justify-center hover:text-indigo-200"
+                aria-label="clement.lebiez@gmail.com"
+                title="clement.lebiez@gmail.com"
                 href="mailto:clement.lebiez@gmail.com"
                 target="_blank"
                 rel="noreferrer"
@@ -17,6 +19,8 @@ const Footer = () => {
             </a>
             <a
                 className="flex items-center justify-center hover:text-indigo-200"
+                aria-label="Clebiez LinkedIn"
+                title="Clebiez LinkedIn"
                 href="https://linkedin.com/in/clebiez"
                 target="_blank"
                 rel="noreferrer"
@@ -25,6 +29,8 @@ const Footer = () => {
             </a>
             <a
                 className="flex items-center justify-center hover:text-indigo-200"
+                aria-label="Clebiez Github"
+                title="Clebiez Github"
                 href="https://github.com/clebiez"
                 target="_blank"
                 rel="noreferrer"
@@ -33,6 +39,8 @@ const Footer = () => {
             </a>
             <a
                 className="flex items-center justify-center hover:text-indigo-200"
+                aria-label="Clebiez Twitter"
+                title="Clebiez Twitter"
                 href="https://twitter.com/clebiez"
                 target="_blank"
                 rel="noreferrer"

@@ -14,7 +14,7 @@ module.exports = {
                 'hero-pattern': "url('/bg-hero.svg')",
             }),
             fontFamily: {
-                sans: [...defaultTheme.fontFamily.sans],
+                sans: ['Verdana', ...defaultTheme.fontFamily.sans],
             },
         },
     },

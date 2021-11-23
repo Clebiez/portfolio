@@ -1,5 +1,6 @@
 {
     "title": "Développeur Front-End @ HoHey",
+    "meta_description": "J'ai été chargé de développer la partie front-end de HoHey : Un comparateur de station de ski pour réserver ses vacances en toute simplicité.",
     "resume_1": "HoHey est un comparateur de station de skis imaginé par <0>Romain Pichard</0>,<1>Jérémy Leherpeur</1> et <2>Kevin Dubourg</2>.",
     "resume_2": "Ce projest est développé en Angular et Symfony. J'ai travaillé en tant que Freelance pour développer la partie front-end, <0>Kévin Bizien</0> a réalisé le design et Jérémy a créé le back-end.",
     "logo_alt_image": "HoHey Logo",

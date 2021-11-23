@@ -11,6 +11,7 @@ export default function GreenframeUseCase() {
         <>
             <Head>
                 <title>{t('meta_title')}</title>
+                <meta name="description" content={t('meta_description')} />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <ArticleLayout>

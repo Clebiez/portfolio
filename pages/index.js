@@ -19,6 +19,7 @@ const Home = () => {
         <MainLayout>
             <Head>
                 <title>{t('meta_title')}</title>
+                <meta name="description" content={t('meta_description')} />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
@@ -56,7 +57,7 @@ const Home = () => {
                     image={greenframeImage}
                     imageWidth="1479"
                     imageHeight="937"
-                    href="use-cases/greenframe"
+                    href="/use-cases/greenframe"
                     altImage={t('projects.greenframe.alt_image')}
                 />
                 <ProjectCard
@@ -65,7 +66,7 @@ const Home = () => {
                     image={yousignImage}
                     imageWidth="2880"
                     imageHeight="1800"
-                    href="use-cases/yousign"
+                    href="/use-cases/yousign"
                     altImage={t('projects.yousign.alt_image')}
                 />
                 <ProjectCard
@@ -74,7 +75,7 @@ const Home = () => {
                     image={unicaenImage}
                     imageWidth="1500"
                     imageHeight="850"
-                    href="use-cases/teaching"
+                    href="/use-cases/teaching"
                     altImage={t('projects.unicaen.alt_image')}
                 />
                 <ProjectCard
@@ -83,7 +84,7 @@ const Home = () => {
                     image={hoheyImage}
                     imageWidth="1680"
                     imageHeight="952"
-                    href="use-cases/hohey"
+                    href="/use-cases/hohey"
                     altImage={t('projects.hohey.alt_image')}
                 />
                 {/* <ProjectCard

@@ -1,25 +1,25 @@
 import NextImage from 'next/image'
 
-const Image = (props) => (
+const Image = ({size, noCard, ...props}) => (
     <figure className="my-8">
         <div
             className={`${
-                props?.size === 'xs'
+                size === 'xs'
                     ? 'max-w-xs'
-                    : props?.size === 'sm'
+                    : size === 'sm'
                     ? 'max-w-sm'
-                    : props?.size === 'md'
+                    : size === 'md'
                     ? 'max-w-md'
-                    : props?.size === 'xl'
+                    : size === 'xl'
                     ? 'max-w-xl'
-                    : props?.size === '2xl'
+                    : size === '2xl'
                     ? 'max-w-2xl'
                     : 'max-w-lg'
             } m-auto ${
-                !props.noCard && 'rounded-xl shadow-xl overflow-hidden'
+                !noCard && 'rounded-xl shadow-xl overflow-hidden'
             }`}
         >
-            <NextImage {...props} quality={100} layout="responsive" />
+            <NextImage {...props} quality={60} layout="responsive" />
         </div>
         <figcaption className="mt-1 italic text-center text-gray-800">
             {props.alt}
