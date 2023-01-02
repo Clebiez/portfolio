@@ -8,10 +8,8 @@ import MainLayout from '../layouts/MainLayout'
 
 import greenframeImage from '../public/greenframe/analysis.png'
 import yousignImage from '../public/yousign/swipe.png'
-import play2meetyouImage from '../public/play2meetyou.jpg'
 import hoheyImage from '../public/hohey/home.jpeg'
 import unicaenImage from '../public/teaching/unicaen.jpg'
-import facilitationImage from '../public/facilitation.jpeg'
 
 const Home = () => {
     const { t } = useTranslation('common')
